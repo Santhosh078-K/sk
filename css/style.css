@@ -1,0 +1,211 @@
+/* Custom CSS for SK Robotics Website */
+
+/* Ensure smooth scrolling for anchor links (still useful for internal page anchors like on homepage) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for page sections */
+.page-section {
+    min-height: calc(100vh - 80px); /* Adjust for header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Offset for fixed header */
+    padding-bottom: 80px;
+}
+
+/* Active navigation link styling */
+.nav-link.active {
+    color: #4F46E5; /* Indigo-600 */
+    border-bottom: 2px solid #4F46E5;
+    font-weight: 600; /* Semi-bold */
+}
+
+/* Adjustments for the Hero Section to ensure full viewport height minus header */
+#hero-section {
+    min-height: calc(100vh - 80px); /* 80px is an approximation of header height */
+    padding-top: 0; /* No extra padding for hero section */
+    padding-bottom: 0; /* No extra padding for hero section */
+    background-size: cover;
+    background-position: center;
+    /* This transition property will make the background image change smoothly */
+    transition: background-image 1s ease-in-out;
+}
+
+/* Specific styling for the map iframe to be fully responsive within its container */
+#contact-page iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Global Fade-in-Up Animation for elements on scroll --- */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for elements before they scroll into view */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Staggered animation delay for elements (optional, can be overridden by JS) */
+.animate-on-scroll:nth-child(1) { animation-delay: 0s; }
+.animate-on-scroll:nth-child(2) { animation-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { animation-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { animation-delay: 0.3s; }
+/* Add more if you have many elements for finer control */
+
+
+/* --- Chatbot Specific Styles --- */
+#chatbot-modal {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#chatbot-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#chatbot-toggle-btn {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#chatbot-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Chatbot typing indicator animation */
+.typing-indicator span {
+    animation: blink 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+/* Animation for chatbot modal appearance */
+.animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+}
+
+.animate-scale-out {
+    animation: scaleOut 0.3s ease-in forwards;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleOut {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.9); opacity: 0; }
+}
+
+/* Prose classes for Markdown rendering within chatbot/LLM outputs */
+.prose {
+    color: inherit; /* Ensure text color from parent is inherited */
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.5;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-weight: 600; /* semi-bold */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #4338ca; /* indigo-700 darker shade */
+}
+
+.prose ul, .prose ol {
+    list-style-position: inside;
+    margin-left: 1rem;
+    padding-left: 0;
+}
+
+.prose li {
+    margin-bottom: 0.5em;
+}
+
+.prose p {
+    margin-bottom: 1em;
+}
+
+.prose strong {
+    font-weight: 700; /* bold */
+}
+
+/* --- New Grid Item Animations (Why Choose Us Section) --- */
+.why-choose-us-item {
+    position: relative;
+    overflow: hidden; /* Ensures glowing border effect stays within bounds */
+}
+
+.why-choose-us-item:hover {
+    /* Slightly more pronounced scale already handled by tailwind transform-scale-105 */
+    /* Box shadow for a lift effect */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 0 0 2px #6366F1; /* Inner glowing border */
+}
+
+/* Icon pulse animation for grid items */
+.animate-icon-pulse {
+    animation: pulseIcon 2s infinite ease-in-out;
+}
+
+@keyframes pulseIcon {
+    0% { transform: scale(1); color: inherit; }
+    50% { transform: scale(1.1); color: #4F46E5; } /* Slightly larger and indigo color */
+    100% { transform: scale(1); color: inherit; }
+}
+
+/* --- New Project Grid Item Styles (Our Projects in Action Section) --- */
+.project-grid-item img {
+    /* Ensures image scaling transition */
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-grid-item .absolute {
+    /* Ensures overlay opacity transition */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-grid-item .fa-play-circle {
+    /* Ensures play icon scaling transition */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Play icon default state (hidden) */
+.project-grid-item .fa-play-circle {
+    opacity: 0;
+}
+
+/* Play icon on group hover */
+.project-grid-item:hover .fa-play-circle {
+    opacity: 1;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}

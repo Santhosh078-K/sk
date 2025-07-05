@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Robotics: Class Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-10 sm:h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Home</a>
+                <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Courses</a>
+                <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Programs</a>
+                <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Milestones</a>
+                <a href="registration.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Register</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-2">
+            <nav class="flex flex-col items-center space-y-2">
+                <a href="index.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Home</a>
+                <a href="courses.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Courses</a>
+                <a href="programs.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Programs</a>
+                <a href="milestones.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Milestones</a>
+                <a href="registration.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300 active">Register</a>
+                <a href="contact.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20"> <section id="registration-page" class="py-16 bg-white min-h-screen flex items-center justify-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Register for a Class Today!</h2>
+                <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-8 animate-on-scroll">
+                    Fill out the form below to enroll your child. We will contact you within 24 hours to confirm the batch and payment details.
+                </p>
+
+                <div class="bg-gray-50 rounded-lg shadow-lg p-8 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll">
+                    <form id="registration-form" action="https://formspree.io/f/xvgrldpv" method="POST" class="max-w-xl mx-auto space-y-6">
+                        <div>
+                            <label for="parent-name" class="block text-gray-700 text-sm font-bold mb-2">Parent's Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="parent-name" name="parentName" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                        </div>
+                        <div>
+                            <label for="student-name" class="block text-gray-700 text-sm font-bold mb-2">Student's Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="student-name" name="studentName" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                        </div>
+                        <div>
+                            <label for="student-age" class="block text-gray-700 text-sm font-bold mb-2">Student's Age/Class <span class="text-red-500">*</span></label>
+                            <input type="text" id="student-age" name="studentAge" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200" placeholder="E.g., 10 (Age) or Grade 5 (Class)">
+                        </div>
+                        <div>
+                            <label for="phone-number" class="block text-gray-700 text-sm font-bold mb-2">Contact Phone Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone-number" name="phoneNumber" pattern="[0-9]{10}" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                        </div>
+                        <div>
+                            <label for="school name" class="block text-gray-700 text-sm font-bold mb-2">school name <span class="text-red-500">*</span></label>
+                            <input type="text" id="text" name="school name" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                        </div>
+                        <div>
+                            <label for="course-program" class="block text-gray-700 text-sm font-bold mb-2">Course Interest <span class="text-red-500">*</span></label>
+                            <select id="course-program" name="courseProgram" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200 bg-white">
+                                <option value="">Select a Course</option>
+                                <option value="Breadboard Electronics">Breadboard Electronics</option>
+                                <option value="Arduino automations">Arduino automations</option>
+                                <option value="Robotics">Robotics</option>
+                                <option value="IoT">IoT</option>
+                                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                <option value="c/c++">c/c++</option>
+                                <option value="python">python</option>
+
+
+                            </select>
+                        </div>
+                        <div>
+                            <label for="program-interest" class="block text-gray-700 text-sm font-bold mb-2">Program Interest <span class="text-red-500">*</span></label>
+                            <select id="program-interest" name="programInterest" required
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200 bg-white">
+                                <option value="">Select Program</option>
+                                 <option value="Weekend Class">Weekend Class</option>
+                                <option value="regular class">Regular class</option>
+                                <option value="internship">Internship</option>
+                                 <option value="Vocational Training">Vocational Training</option>
+                                <option value="guest lecture">Guest lecture</option>
+
+
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"></textarea>
+                        </div>
+
+                        <input type="hidden" name="_replyto" id="form-reply-to-email">
+                        <input type="hidden" name="_subject" value="New SK Robotics Class Registration!">
+
+                        <button type="submit"
+                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                            Submit Registration
+                        </button>
+                    </form>
+
+                    <div id="form-message" class="mt-8 p-4 rounded-md text-center hidden"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="chatbot-toggle-btn" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-50">
+        <i class="fas fa-comments text-2xl"></i>
+    </button>
+
+    <div id="chatbot-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[100] hidden">
+        <div class="bg-white rounded-lg shadow-xl w-11/12 md:w-1/2 lg:w-1/3 h-3/4 flex flex-col overflow-hidden">
+            <div class="bg-indigo-600 text-white p-4 flex justify-between items-center rounded-t-lg">
+                <h3 class="text-xl font-semibold"><i class="fas fa-robot mr-2"></i>SK Robotics AI Assistant</h3>
+                <button id="chatbot-close-btn" class="text-white hover:text-gray-200 focus:outline-none">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-100 flex flex-col space-y-3">
+                </div>
+
+            <div class="p-4 bg-gray-200 flex items-center rounded-b-lg">
+                <input type="text" id="chat-input" placeholder="Type your message..."
+                    class="flex-1 border rounded-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button id="chat-send-btn" class="ml-3 bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">SK Robotics</h3>
+                <p class="text-gray-400">Empowering the next generation of innovators through hands-on robotics education.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Home</a></li>
+                    <li><a href="courses.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Courses</a></li>
+                    <li><a href="programs.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
+                    <li><a href="milestones.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Milestones</a></li>
+                    <li><a href="registration.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Register</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">Contact Info</h3>
+                <p class="text-gray-400 mb-2"><i class="fas fa-phone-alt mr-2"></i>+91 9688987156</p>
+                <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i>skroboticsstem@gmail.com</p>
+                <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i>UKPM Square,NH 83,Gandhi Nagar udumalpet</p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm mt-10">
+            &copy; 2025 SK Robotics. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
