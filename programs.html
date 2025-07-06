@@ -19,6 +19,7 @@
             </a>
             <nav class="hidden md:flex space-x-6">
                 <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">About Us</a>
                 <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Courses</a>
                 <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Programs</a>
                 <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Milestones</a>
@@ -32,6 +33,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-2">
             <nav class="flex flex-col items-center space-y-2">
                 <a href="index.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Home</a>
+                <a href="about.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">About Us</a>
                 <a href="courses.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Courses</a>
                 <a href="programs.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300 active">Programs</a>
                 <a href="milestones.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Milestones</a>
@@ -41,31 +43,126 @@
         </div>
     </header>
 
-    <main class="pt-20"> <section id="programs-page" class="py-16 bg-gray-50">
+    <main class="pt-20">
+        <section id="programs-page" class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Special Programs & Workshops</h2>
 
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll">
-                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">School Workshops</h3>
-                    <p class="text-lg text-gray-700 mb-6">
-                        Empowering School Students with Future-Ready Tech Skills!
-                        We provide hands-on training for students from grade 3 to 12 in Breadboard Electronics, Arduino, Automation, Robotics, AI, and IoT for CBSE, ICSE, IGCSE, and Matric schools across India. Our syllabus at SK Robotics is carefully designed to align with the National Education Policy (NEP), emphasizing experiential and interdisciplinary learning. We integrate practical skills in electronics, programming, robotics, AI, and IoT to foster creativity, critical thinking, and problem-solving. By blending hands-on projects with theoretical concepts, we prepare students to meet the demands of the modern, technology-driven world while supporting the NEP’s vision of holistic education.
-                    </p>
-                    <div class="mb-6">
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Customizable curriculum for different age groups (Grade 3-12)</li>
-                            <li>On-site delivery by SK Robotics instructors</li>
-                            <li>Focus on hands-on project building and problem-solving</li>
-
-                        </ul>
+                <!-- School Workshops Section -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">School Workshops</h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Empowering School Students with Future-Ready Tech Skills! We provide hands-on training for students from grade 3 to 12 in Breadboard Electronics, Arduino, Automation, Robotics, AI, and IoT for CBSE, ICSE, IGCSE, and Matric schools across India. Our syllabus at SK Robotics is carefully designed to align with the National Education Policy (NEP), emphasizing experiential and interdisciplinary learning. We integrate practical skills in electronics, programming, robotics, AI, and IoT to foster creativity, critical thinking, and problem-solving. By blending hands-on projects with theoretical concepts, we prepare students to meet the demands of the modern, technology-driven world while supporting the NEP’s vision of holistic education.
+                        </p>
+                        <div class="mb-6">
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Customizable curriculum for different age groups (Grade 3-12)</li>
+                                <li>On-site delivery by SK Robotics instructors</li>
+                                <li>Focus on hands-on project building and problem-solving</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                            Inquire for School Workshops
+                        </a>
                     </div>
-                    <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
-                        Inquire for School Workshops
-                    </a>
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="https://placehold.co/400x300/A0D9FF/000000?text=School+Workshop" alt="School Workshop Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
+                    </div>
                 </div>
 
+                <!-- College Programs Section -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">College Programs</h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            <span class="font-semibold text-indigo-600">🔧 Certified Hands-On Technical Workshops (2–10 Days)</span><br>
+                            We offer certified hands-on workshops for students from Arts & Science, Engineering, ME/M.Tech, and Agriculture colleges. Our programs emphasize practical skills and real-world applications across various domains, including Breadboard Electronics, Arduino & Automation, Robotics, Artificial Intelligence (AI), Internet of Things (IoT), Python Programming, and PCB Design.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-6">
+                            All workshops follow an industry-relevant curriculum, are 100% practical, and cater to all skill levels. Sessions can be held on-campus or at our facility, with certification awarded upon completion. In just 3 months, we have successfully trained 2000+ students, empowering them with the skills needed for today’s technology-driven world.
+                        </p>
+                        <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                            Inquire for College Programs
+                        </a>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="https://placehold.co/400x300/B0E0E6/000000?text=College+Program" alt="College Program Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Motivational Programs Section -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Motivational Programs</h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            <span class="font-semibold text-indigo-600">"Your Future Is in Your Hands"</span><br>
+                            Over 200+ Motivational Sessions Successfully Delivered! We have proudly conducted 200+ motivational speeches and workshops across schools and colleges, inspiring thousands of students to unlock their true potential. Our affordable and impactful sessions have helped students build confidence, develop a growth mindset, and pursue their passions.
+                        </p>
+                        <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                            Book a Motivational Session
+                        </a>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="https://placehold.co/400x300/C0C0C0/000000?text=Motivational+Program" alt="Motivational Program Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Project Distribution & On-Campus Project Training Section -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Project Distribution & On-Campus Project Training</h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            We provide ready-to-use mini and final year projects to school and college students across various technical fields, including Electronics, Robotics, IoT, AI, Python, and Automation. Along with project distribution, we offer on-campus project training sessions to guide students through the complete development process—from concept to working prototype.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Our hands-on training ensures students gain practical experience, understand project implementation, and build confidence to present their work effectively. This combined approach helps students excel academically and prepares them for industry challenges.
+                        </p>
+                        <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                            Inquire about Projects & Training
+                        </a>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="https://placehold.co/400x300/D3D3D3/000000?text=Project+Training" alt="Project Training Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Upcoming Courses Section -->
                 <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll">
-                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">Weekend &week days class </h3>
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">Upcoming Courses</h3>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Stay tuned for our exciting new courses designed to keep you at the forefront of robotics and technology!
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold text-indigo-700 mb-2">Advanced AI for Robotics</h4>
+                                <p class="text-sm text-indigo-500 mb-4"><i class="far fa-calendar-alt mr-2"></i>October 1st - November 15th, 2025</p>
+                                <p class="text-gray-700 mb-4">Dive deep into advanced AI concepts and their application in sophisticated robotic systems.</p>
+                                <p class="text-green-600 font-bold mb-4"><i class="fas fa-check-circle mr-2"></i>Enrollment Opening Soon</p>
+                                <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                                    Pre-Register Now
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold text-indigo-700 mb-2">Drone Programming & Piloting</h4>
+                                <p class="text-sm text-indigo-500 mb-4"><i class="far fa-calendar-alt mr-2"></i>November 1st - December 10th, 2025</p>
+                                <p class="text-gray-700 mb-4">Learn to program and safely pilot drones for various applications, from aerial photography to delivery systems.</p>
+                                <p class="text-orange-600 font-bold mb-4"><i class="fas fa-exclamation-circle mr-2"></i>Limited Seats!</p>
+                                <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                                    Register Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekend & Weekdays Class Section (Existing) -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">Weekend & Weekdays Class</h3>
                     <p class="text-lg text-gray-700 mb-6">
                         SK Robotics offers affordable, hands-on weekend classes in Breadboard Electronics, Arduino, Automation, Robotics, AI, and IoT for students from grades 3 to 12.
                         Located at UKPM Square, Udumalpet.
@@ -104,56 +201,7 @@
                     </a>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll">
-                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">Upcoming Special Workshops</h3>
-                    <p class="text-lg text-gray-700 mb-8">
-                        Beyond our regular programs, look out for our special one-day or two-day workshops on exciting, trending topics in robotics and AI!
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold text-indigo-700 mb-2">Build-a-Drone Workshop</h4>
-                                <p class="text-sm text-indigo-500 mb-4"><i class="far fa-calendar-alt mr-2"></i>August 10th - 11th, 2025</p>
-                                <p class="text-gray-700 mb-4">In this 2-day event, students will build and fly their own quadcopter from scratch.</p>
-                                <p class="text-green-600 font-bold mb-4"><i class="fas fa-check-circle mr-2"></i>Registration Open</p>
-                                <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
-                                    Register Now
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold text-indigo-700 mb-2">Competitive Robotics Prep.</h4>
-                                <p class="text-sm text-indigo-500 mb-4"><i class="far fa-calendar-alt mr-2"></i>September 5th - 6th, 2025</p>
-                                <p class="text-gray-700 mb-4">Prepare for regional and national robotics competitions with advanced strategies.</p>
-                                <p class="text-orange-600 font-bold mb-4"><i class="fas fa-exclamation-circle mr-2"></i>Seats Filling Fast!</p>
-                                <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
-                                    Register Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-100 rounded-lg shadow-lg p-8 mt-12 animate-on-scroll">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">✨ Generate New Workshop Ideas</h3>
-                        <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-6">
-                            Enter a topic or theme, and our AI will suggest creative workshop ideas for you!
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 mb-6">
-                            <input type="text" id="workshop-topic-input" placeholder="e.g., Space Exploration, Eco-Robots, Art & AI"
-                                class="flex-1 shadow-sm appearance-none border rounded-md py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200">
-                            <button id="generate-workshop-btn"
-                                class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                                ✨ Generate Ideas
-                            </button>
-                        </div>
-                        <div id="workshop-output" class="workshop-output mt-4 text-sm text-gray-800 bg-purple-50 p-4 rounded-md hidden">
-                            <p class="text-center text-purple-700">Generating workshop ideas...</p>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </section>
 
@@ -195,6 +243,7 @@
                 <h3 class="text-xl font-bold text-indigo-300 mb-4">Quick Links</h3>
                 <ul class="space-y-2">
                     <li><a href="index.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">About Us</a></li>
                     <li><a href="courses.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Courses</a></li>
                     <li><a href="programs.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
                     <li><a href="milestones.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Milestones</a></li>

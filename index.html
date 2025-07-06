@@ -19,6 +19,7 @@
             </a>
             <nav class="hidden md:flex space-x-6">
                 <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">About Us</a>
                 <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Courses</a>
                 <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Programs</a>
                 <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Milestones</a>
@@ -32,6 +33,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-2">
             <nav class="flex flex-col items-center space-y-2">
                 <a href="index.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300 active">Home</a>
+                <a href="about.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">About Us</a>
                 <a href="courses.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Courses</a>
                 <a href="programs.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Programs</a>
                 <a href="milestones.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Milestones</a>
@@ -41,9 +43,9 @@
         </div>
     </header>
 
-    <main class="pt-20"> <section id="hero-section" class="min-h-screen bg-cover bg-center flex items-center relative transition-background">
-            <div class="absolute inset-0 bg-black opacity-60"></div>
-            <div class="container mx-auto px-4 py-16 text-center text-white relative z-10 animate-on-scroll">
+    <main class="pt-20">
+        <section id="hero-section" class="min-h-screen bg-cover bg-center flex items-center relative transition-background">
+            <div class="absolute inset-0 bg-black opacity-40"></div> <div class="container mx-auto px-4 py-16 text-center text-white relative z-10 animate-on-scroll">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
                     Welcome to SK Robotics<br>Empowering young minds with Rrobotics and technologys
                 </h1>
@@ -56,24 +58,6 @@
             </div>
         </section>
 
-        <section id="about-section" class="py-16 bg-white">
-            <div class="container mx-auto px-4 animate-on-scroll">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-8">About SK Robotics</h2>
-                <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-                    “Robotics is not about building machines
-                    it’s about building minds."<br>
-                    — Sabarinathan Dhandapani<br><br>
-                    "Learn by doing – not just watching!"
-                    we offer hands-on technical training in Electronics, Robotics, AI, IoT, Embedded Systems, and Programming. Our practical learning approach strengthens core scientific, logical, and coding skills essential for today's tech-driven world. Aligned with the vision of Industry 5.0, our programs help school and college students bridge the gap between classroom theory and real-world applications. Through project-based learning, we nurture innovation, problem-solving, and future-ready thinking..
-
-                    Want to stand out in a tech-driven future?
-
-                    In today’s fast-changing world, students need practical skills that boost critical thinking, creativity, and problem-solving beyond traditional learning. These abilities prepare them to adapt and thrive in the future workplace, where technology and automation are everywhere. By gaining hands-on experience, students become innovators, ready to create smart solutions and take advantage of new career opportunities in the evolving Industry 5.0 landscape.
-
-                </p>
-
-            </div>
-        </section>
         <section id="achievements-section" class="py-8 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
@@ -94,82 +78,106 @@
                 </div>
             </div>
         </section>
-        <section id="about-section" class="py-16 bg-white">
-            <div class="container mx-auto px-4 animate-on-scroll">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-8">OUR VISION</h2>
-                <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-                    <br>
 
-To empower the next generation with robotics and automation Skills, shaping future innovators and problem-solvers.
+        <section id="our-unique-programs" class="py-16 bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-12 drop-shadow-md animate-on-scroll">Our Unique Programs</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
 
-                </p>
+                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
+                        <img src="https://placehold.co/100x100/6366F1/FFFFFF?text=Weekend" alt="Weekend Class Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-indigo-200">
+                        <h3 class="text-xl font-semibold mb-2">Weekend Class</h3>
+                        <p class="text-gray-600 text-center flex-grow">Engage in hands-on robotics projects every Saturday and Sunday.</p>
+                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    </div>
 
+                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
+                        <img src="https://placehold.co/100x100/8B5CF6/FFFFFF?text=Regular" alt="Regular Class Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-purple-200">
+                        <h3 class="text-xl font-semibold mb-2">Regular Class</h3>
+                        <p class="text-gray-600 text-center flex-grow">Structured weekday sessions for in-depth learning and consistent progress.</p>
+                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    </div>
+
+                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
+                        <img src="https://placehold.co/100x100/EC4899/FFFFFF?text=Internship" alt="Internship Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-pink-200">
+                        <h3 class="text-xl font-semibold mb-2">Internship</h3>
+                        <p class="text-gray-600 text-center flex-grow">Gain real-world experience with our immersive robotics internship programs.</p>
+                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    </div>
+
+                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
+                        <img src="https://placehold.co/100x100/10B981/FFFFFF?text=Vocational" alt="Vocational Training Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-green-200">
+                        <h3 class="text-xl font-semibold mb-2">Vocational Training</h3>
+                        <p class="text-gray-600 text-center flex-grow">Specialized training to prepare students for careers in robotics and automation.</p>
+                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    </div>
+
+                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
+                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=Lecture" alt="Guest Lecture Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-blue-200">
+                        <h3 class="text-xl font-semibold mb-2">Guest Lecture</h3>
+                        <p class="text-gray-600 text-center flex-grow">Inspiring sessions from industry experts and robotics pioneers.</p>
+                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    </div>
+
+                </div>
             </div>
         </section>
-          </section>
-        <section id="about-section" class="py-16 bg-white">
-            <div class="container mx-auto px-4 animate-on-scroll">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-8">OUR MISSION</h2>
-                <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-                    <br>
 
-To provide affordable and accessible robotics training to students of all levels.<br><br>To promote STEM education through fun, interactive, and practical learning experiences.
-<br><br>To partner with educational institutions to integrate robotics into regular curriculum and classroom activities.
-<br>
-
-
-                </p>
-
+        <section id="kit-sales-section" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-700 mb-8 animate-on-scroll">Affordable Robotics & Electronics Kits for Sale!</h2>
+                <div class="max-w-3xl mx-auto mb-12 animate-on-scroll text-lg text-gray-700 text-left">
+                    <p class="mb-4">SK Robotics offers specially designed kits to enhance hands-on learning:</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>Level 1: Breadboard Electronics (Beginner)</strong></li>
+                        <li><strong>Level 2: Arduino Automation (Intermediate)</strong></li>
+                        <li><strong>Level 3: Robotics (Advanced)</strong></li>
+                    </ul>
+                    <p class="mt-4">Each kit includes components, instructions, and access to 100+ real-time projects, making it easy for students to learn by doing. Ideal for Grades 3 to 12, our kits are perfect for school projects, competitions, and personal innovation — all at affordable prices!</p>
+                </div>
             </div>
         </section>
-
-
 
         <section id="why-choose-us" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Why Choose SK Robotics?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center items-stretch">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-lightbulb text-5xl text-yellow-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Affordable, Quality Training</h3>
-                        <p class="text-gray-600">We provide top-notch hands-on learning at a cost that’s accessible to all students without compromising quality.
+                        <p class="text-gray-600 flex-grow">We provide top-notch hands-on learning at a cost that’s accessible to all students without compromising quality.
 </p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-chalkboard-teacher text-5xl text-green-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Hands-On Learning Without Expensive Kits</h3>
-                        <p class="text-gray-600">Unlike other programs, we don’t rely on costly product-based kits. Instead, we focus on building skills using open-source hardware and software, giving you the freedom to experiment and innovate.
+                        <p class="text-gray-600 flex-grow">Unlike other programs, we don’t rely on costly product-based kits. Instead, we focus on building skills using open-source hardware and software, giving you the freedom to experiment and innovate.
 </p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-award text-5xl text-blue-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Open-Source Tools for Creativity</h3>
-                        <p class="text-gray-600"> Our training uses open-source platforms, enabling you to explore, customize, and create without limitations or extra expenses.
+                        <p class="text-gray-600 flex-grow"> Our training uses open-source platforms, enabling you to explore, customize, and create without limitations or extra expenses.
 </p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Industry 5.0 Ready Skills</h3>
-                        <p class="text-gray-600">Our curriculum is designed to prepare you for the future, combining human creativity with cutting-edge technology.
+                        <p class="text-gray-600 flex-grow">Our curriculum is designed to prepare you for the future, combining human creativity with cutting-edge technology.
 </p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Mentorship</h3>
-                        <p class="text-gray-600">Whether you’re a school student or a career aspirant, our experienced mentors guide you every step of the way.
-</p>
-
+                        <p class="text-gray-600 flex-grow">Whether you’re a school student or a career aspirant, our experienced mentors guide you every step of the way.
 </p>
                     </div>
-                     </div>
-                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-World Project Experience</h3>
-                        <p class="text-gray-600">Learn by building real projects that develop your problem-solving skills and boost your confidence.
-
-
+                        <p class="text-gray-600 flex-grow">Learn by building real projects that develop your problem-solving skills and boost your confidence.
 </p>
-
+                    </div>
                 </div>
             </div>
         </section>
@@ -177,39 +185,40 @@ To provide affordable and accessible robotics training to students of all levels
         <section id="projects-in-action" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Our Projects in Action</h2>
+                <!-- Removed the kit description paragraph from here as it's now in its own section -->
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751557848/WhatsApp_Image_2025-07-03_at_9.19.35_PM_nnqflv.jpg" alt="Breadboard electronics" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751557848/WhatsApp_Image_2025-07-03_at_9.19.35_PM_nnqflv.jpg" alt="Breadboard Electronics Kit" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Breadboard Electronics</h3>
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Level 1: Breadboard Electronics (Beginner)</h3>
                             <p class="text-gray-700 mb-4">
-                                Hands-on experience building and testing circuits on breadboards.
+                                This beginner-friendly kit includes components, instructions, and access to 100+ real-time projects. Perfect for Grades 3-12 to learn by doing!
                             </p>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751727888/arudino_bgvbsp.jpg" alt="Arduino Automations" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751727888/arudino_bgvbsp.jpg" alt="Arduino Automation Kit" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Arduino Automations</h3>
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Level 2: Arduino Automation (Intermediate)</h3>
                             <p class="text-gray-700 mb-4">
-                                Creating automated systems using Arduino microcontrollers.
+                                An intermediate kit designed for creating automated systems. Includes components, instructions, and access to 100+ real-time projects for hands-on learning.
                             </p>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751385939/r2_to2htn.jpg" alt="Robotics" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751385939/r2_to2htn.jpg" alt="Robotics Kit" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Robotics</h3>
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Level 3: Robotics (Advanced)</h3>
                             <p class="text-gray-700 mb-4">
-                                Designing, building, and programming various types of robots.
+                                Our advanced robotics kit for designing, building, and programming various robots. Comes with components, instructions, and 100+ real-time projects for comprehensive learning.
                             </p>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
                         <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751728659/iot_bhnezo.png" alt="IoT" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">IoT</h3>
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">IoT Projects</h3>
                             <p class="text-gray-700 mb-4">
                                 Developing smart devices and systems connected to the Internet of Things.
                             </p>
@@ -218,7 +227,7 @@ To provide affordable and accessible robotics training to students of all levels
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
                         <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751728568/ai_drgx3m.jpg" alt="Artificial Intelligence" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Artificial Intelligence</h3>
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Artificial Intelligence Projects</h3>
                             <p class="text-gray-700 mb-4">
                                 Exploring AI concepts and building intelligent systems.
                             </p>
@@ -281,6 +290,7 @@ To provide affordable and accessible robotics training to students of all levels
                 <h3 class="text-xl font-bold text-indigo-300 mb-4">Quick Links</h3>
                 <ul class="space-y-2">
                     <li><a href="index.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">About Us</a></li>
                     <li><a href="courses.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Courses</a></li>
                     <li><a href="programs.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
                     <li><a href="milestones.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Milestones</a></li>
