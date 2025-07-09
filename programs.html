@@ -8,8 +8,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Bootstrap CSS for all carousels -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Additional styling for Bootstrap carousels to fit Tailwind layout */
+        .bootstrap-carousel-wrapper {
+            background-color: white;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            padding: 2rem; /* p-8 */
+            margin-bottom: 3rem; /* mb-12 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* transform transition duration-300 hover:scale-[1.01] hover:shadow-xl */
+        }
+
+        .bootstrap-carousel-wrapper:hover {
+            transform: scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .bootstrap-carousel-wrapper .carousel-item img {
+            border-radius: 0.5rem; /* rounded-lg */
+            height: auto; /* Ensure aspect ratio is maintained */
+            max-height: 400px; /* Optional: limit height for consistency */
+            object-fit: cover; /* Cover the area */
+        }
+
+        /* Custom styling for carousel captions */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 2rem); /* Adjust width to fit within padding */
+            max-width: 90%; /* Ensure it doesn't get too wide on large screens */
+        }
+
+        .carousel-caption h5 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .carousel-caption p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Text shadow for better readability on images */
+        .text-shadow-md {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+    </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <header class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
@@ -21,7 +74,7 @@
                 <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Home</a>
                 <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">About Us</a>
                 <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Courses</a>
-                <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Programs</a>
+                <a href="programs.html" class="nav-link text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Programs</a>
                 <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Milestones</a>
                 <a href="registration.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Register</a>
                 <a href="contact.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Contact Us</a>
@@ -48,82 +101,174 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Special Programs & Workshops</h2>
 
-                <!-- School Workshops Section -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row items-center gap-8">
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">School Workshops</h3>
-                        <p class="text-lg text-gray-700 mb-6">
-                            Empowering School Students with Future-Ready Tech Skills! We provide hands-on training for students from grade 3 to 12 in Breadboard Electronics, Arduino, Automation, Robotics, AI, and IoT for CBSE, ICSE, IGCSE, and Matric schools across India. Our syllabus at SK Robotics is carefully designed to align with the National Education Policy (NEP), emphasizing experiential and interdisciplinary learning. We integrate practical skills in electronics, programming, robotics, AI, and IoT to foster creativity, critical thinking, and problem-solving. By blending hands-on projects with theoretical concepts, we prepare students to meet the demands of the modern, technology-driven world while supporting the NEP’s vision of holistic education.
-                        </p>
-                        <div class="mb-6">
-                            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                <li>Customizable curriculum for different age groups (Grade 3-12)</li>
-                                <li>On-site delivery by SK Robotics instructors</li>
-                                <li>Focus on hands-on project building and problem-solving</li>
-                            </ul>
+                <!-- School Workshops Carousel -->
+                <div class="bootstrap-carousel-wrapper animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">School Workshops</h3>
+                    <div id="schoolCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752074940/skimage_lqncdw.jpg" class="d-block w-100 rounded-lg" alt="School Workshop Image 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">Hands-on Learning for Schools</h5>
+                                    <p class="text-white text-shadow-md">Engaging students from Grade 3 to 12.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752073239/skimage2_ymorj0.jpg" class="d-block w-100 rounded-lg" alt="School Workshop Image 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">Future-Ready Tech Skills</h5>
+                                    <p class="text-white text-shadow-md">Electronics, Robotics, AI, and IoT.</p>
+                                </div>
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 text-center">
+                        Empowering School Students with Future-Ready Tech Skills! We provide hands-on training for students from grade 3 to 12 in Breadboard Electronics, Arduino, Automation, Robotics, AI, and IoT for CBSE, ICSE, IGCSE, and Matric schools across India. Our syllabus at SK Robotics is carefully designed to align with the National Education Policy (NEP), emphasizing experiential and interdisciplinary learning. We integrate practical skills in electronics, programming, robotics, AI, and IoT to foster creativity, critical thinking, and problem-solving. By blending hands-on projects with theoretical concepts, we prepare students to meet the demands of the modern, technology-driven world while supporting the NEP’s vision of holistic education.
+                    </p>
+                    <div class="mb-6 text-center">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 inline-block text-left">
+                            <li>Customizable curriculum for different age groups (Grade 3-12)</li>
+                            <li>On-site delivery by SK Robotics instructors</li>
+                            <li>Focus on hands-on project building and problem-solving</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
                         <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                             Inquire for School Workshops
                         </a>
                     </div>
-                    <div class="md:w-1/3 flex justify-center">
-                        <img src="https://placehold.co/400x300/A0D9FF/000000?text=School+Workshop" alt="School Workshop Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
-                    </div>
                 </div>
 
-                <!-- College Programs Section -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row-reverse items-center gap-8">
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">College Programs</h3>
-                        <p class="text-lg text-gray-700 mb-6">
-                            <span class="font-semibold text-indigo-600">🔧 Certified Hands-On Technical Workshops (2–10 Days)</span><br>
-                            We offer certified hands-on workshops for students from Arts & Science, Engineering, ME/M.Tech, and Agriculture colleges. Our programs emphasize practical skills and real-world applications across various domains, including Breadboard Electronics, Arduino & Automation, Robotics, Artificial Intelligence (AI), Internet of Things (IoT), Python Programming, and PCB Design.
-                        </p>
-                        <p class="text-lg text-gray-700 mb-6">
-                            All workshops follow an industry-relevant curriculum, are 100% practical, and cater to all skill levels. Sessions can be held on-campus or at our facility, with certification awarded upon completion. In just 3 months, we have successfully trained 2000+ students, empowering them with the skills needed for today’s technology-driven world.
-                        </p>
+                <!-- College Programs Carousel -->
+                <div class="bootstrap-carousel-wrapper animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">College Programs</h3>
+                    <div id="collegeCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752076065/skimage_college_2_xofj2j.jpg" class="d-block w-100 rounded-lg" alt="College Program Image 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">Certified Technical Workshops</h5>
+                                    <p class="text-white text-shadow-md">For Arts & Science, Engineering, and Agriculture colleges.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752076065/skimage_college_gxfnyr.jpg" class="d-block w-100 rounded-lg" alt="College Program Image 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">Industry-Relevant Curriculum</h5>
+                                    <p class="text-white text-shadow-md">100% practical, catering to all skill levels.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#collegeCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#collegeCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 text-center">
+                        <span class="font-semibold text-indigo-600">🔧 Certified Hands-On Technical Workshops (2–10 Days)</span><br>
+                        We offer certified hands-on workshops for students from Arts & Science, Engineering, ME/M.Tech, and Agriculture colleges. Our programs emphasize practical skills and real-world applications across various domains, including Breadboard Electronics, Arduino & Automation, Robotics, Artificial Intelligence (AI), Internet of Things (IoT), Python Programming, and PCB Design.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 text-center">
+                        All workshops follow an industry-relevant curriculum, are 100% practical, and cater to all skill levels. Sessions can be held on-campus or at our facility, with certification awarded upon completion. In just 3 months, we have successfully trained 2000+ students, empowering them with the skills needed for today’s technology-driven world.
+                    </p>
+                    <div class="text-center">
                         <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                             Inquire for College Programs
                         </a>
                     </div>
-                    <div class="md:w-1/3 flex justify-center">
-                        <img src="https://placehold.co/400x300/B0E0E6/000000?text=College+Program" alt="College Program Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
-                    </div>
                 </div>
 
-                <!-- Motivational Programs Section -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row items-center gap-8">
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Motivational Programs</h3>
-                        <p class="text-lg text-gray-700 mb-6">
-                            <span class="font-semibold text-indigo-600">"Your Future Is in Your Hands"</span><br>
-                            Over 200+ Motivational Sessions Successfully Delivered! We have proudly conducted 200+ motivational speeches and workshops across schools and colleges, inspiring thousands of students to unlock their true potential. Our affordable and impactful sessions have helped students build confidence, develop a growth mindset, and pursue their passions.
-                        </p>
+                <!-- Motivational Programs Carousel -->
+                <div class="bootstrap-carousel-wrapper animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">Motivational Programs</h3>
+                    <div id="motivationalCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752076742/sk_media_2_wbiobp.jpg" class="d-block w-100 rounded-lg" alt="Motivational Program Image 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">"Your Future Is in Your Hands"</h5>
+                                    <p class="text-white text-shadow-md">Inspiring students to unlock their true potential.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752076742/sk_media_qpllts.jpg" class="d-block w-100 rounded-lg" alt="Motivational Program Image 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">200+ Sessions Delivered</h5>
+                                    <p class="text-white text-shadow-md">Building confidence and a growth mindset.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#motivationalCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#motivationalCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 text-center">
+                        <span class="font-semibold text-indigo-600">"Your Future Is in Your Hands"</span><br>
+                        Over 200+ Motivational Sessions Successfully Delivered! We have proudly conducted 200+ motivational speeches and workshops across schools and colleges, inspiring thousands of students to unlock their true potential. Our affordable and impactful sessions have helped students build confidence, develop a growth mindset, and pursue their passions.
+                    </p>
+                    <div class="text-center">
                         <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                             Book a Motivational Session
                         </a>
                     </div>
-                    <div class="md:w-1/3 flex justify-center">
-                        <img src="https://placehold.co/400x300/C0C0C0/000000?text=Motivational+Program" alt="Motivational Program Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
-                    </div>
                 </div>
 
-                <!-- Project Distribution & On-Campus Project Training Section -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-12 transform transition duration-300 hover:scale-[1.01] hover:shadow-xl animate-on-scroll flex flex-col md:flex-row-reverse items-center gap-8">
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Project Distribution & On-Campus Project Training</h3>
-                        <p class="text-lg text-gray-700 mb-6">
-                            We provide ready-to-use mini and final year projects to school and college students across various technical fields, including Electronics, Robotics, IoT, AI, Python, and Automation. Along with project distribution, we offer on-campus project training sessions to guide students through the complete development process—from concept to working prototype.
-                        </p>
-                        <p class="text-lg text-gray-700 mb-6">
-                            Our hands-on training ensures students gain practical experience, understand project implementation, and build confidence to present their work effectively. This combined approach helps students excel academically and prepares them for industry challenges.
-                        </p>
+                <!-- Project Distribution & On-Campus Project Training Carousel -->
+                <div class="bootstrap-carousel-wrapper animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">Project Distribution & On-Campus Project Training</h3>
+                    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752077462/sk_motivatinal_2_rcxbtr.jpg" class="d-block w-100 rounded-lg" alt="Project Training Image 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">Ready-to-Use Projects</h5>
+                                    <p class="text-white text-shadow-md">Mini and final year projects in various technical fields.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://res.cloudinary.com/dujxs5154/image/upload/c_scale,w_800/v1752077462/sk_motivational_zekjp8.jpg" class="d-block w-100 rounded-lg" alt="Project Training Image 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="text-white text-shadow-md">On-Campus Training</h5>
+                                    <p class="text-white text-shadow-md">Guidance from concept to working prototype.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-6 text-center">
+                        We provide ready-to-use mini and final year projects to school and college students across various technical fields, including Electronics, Robotics, IoT, AI, Python, and Automation. Along with project distribution, we offer on-campus project training sessions to guide students through the complete development process—from concept to working prototype.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 text-center">
+                        Our hands-on training ensures students gain practical experience, understand project implementation, and build confidence to present their work effectively. This combined approach helps students excel academically and prepares them for industry challenges.
+                    </p>
+                    <div class="text-center">
                         <a href="contact.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                             Inquire about Projects & Training
                         </a>
-                    </div>
-                    <div class="md:w-1/3 flex justify-center">
-                        <img src="https://placehold.co/400x300/D3D3D3/000000?text=Project+Training" alt="Project Training Image" class="rounded-lg shadow-md w-full max-w-md md:max-w-full object-cover">
                     </div>
                 </div>
 
@@ -200,38 +345,10 @@
                         Register for a Weekend Program
                     </a>
                 </div>
-
-
             </div>
         </section>
 
     </main>
-
-    <button id="chatbot-toggle-btn" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-50">
-        <i class="fas fa-comments text-2xl"></i>
-    </button>
-
-    <div id="chatbot-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[100] hidden">
-        <div class="bg-white rounded-lg shadow-xl w-11/12 md:w-1/2 lg:w-1/3 h-3/4 flex flex-col overflow-hidden">
-            <div class="bg-indigo-600 text-white p-4 flex justify-between items-center rounded-t-lg">
-                <h3 class="text-xl font-semibold"><i class="fas fa-robot mr-2"></i>SK Robotics AI Assistant</h3>
-                <button id="chatbot-close-btn" class="text-white hover:text-gray-200 focus:outline-none">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-            </div>
-
-            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-100 flex flex-col space-y-3">
-                </div>
-
-            <div class="p-4 bg-gray-200 flex items-center rounded-b-lg">
-                <input type="text" id="chat-input" placeholder="Type your message..."
-                    class="flex-1 border rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                <button id="chat-send-btn" class="ml-3 bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
 
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
@@ -245,7 +362,7 @@
                     <li><a href="index.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Home</a></li>
                     <li><a href="about.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">About Us</a></li>
                     <li><a href="courses.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Courses</a></li>
-                    <li><a href="programs.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
+                    <li><a href="programs.html" class="nav-link text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
                     <li><a href="milestones.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Milestones</a></li>
                     <li><a href="registration.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Register</a></li>
                     <li><a href="contact.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Contact Us</a></li>
@@ -270,5 +387,60 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <!-- Bootstrap JS for all carousels -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Animation on scroll
+            const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            animateOnScrollElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Add a basic fade-in-up animation if not already in style.css
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fade-in-up {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                .fade-in-up {
+                    animation: fade-in-up 0.8s ease-out forwards;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
