@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.K Robotics: Shaping Future Innovators</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Marked.js for Markdown rendering in LLM outputs -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Bootstrap CSS for Modal -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
     <header class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
             <a href="index.html" class="flex items-center">
-                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg"alt="SK Robotics Logo" class="h-10 sm:h-12 w-auto">
+                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-10 sm:h-12 w-auto">
             </a>
+            <!-- Navigation -->
             <nav class="hidden md:flex space-x-6">
                 <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Home</a>
                 <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">About Us</a>
@@ -25,10 +36,12 @@
                 <a href="registration.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Register</a>
                 <a href="contact.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Contact Us</a>
             </nav>
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-2">
             <nav class="flex flex-col items-center space-y-2">
                 <a href="index.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300 active">Home</a>
@@ -43,8 +56,10 @@
     </header>
 
     <main class="pt-20">
+        <!-- Hero Section with Dynamic Background -->
         <section id="hero-section" class="min-h-screen bg-cover bg-center flex items-center relative transition-background">
-            <div class="absolute inset-0 bg-black opacity-40"></div> <div class="container mx-auto px-4 py-16 text-center text-white relative z-10 animate-on-scroll">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="container mx-auto px-4 py-16 text-center text-white relative z-10 animate-on-scroll">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
                     Welcome to <br> S.K Robotics<br>
                 </h1>
@@ -56,9 +71,11 @@
                 <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                     Register for a Class
                 </a>
+                <!-- The button to open the modal is now removed as per your request -->
             </div>
         </section>
 
+        <!-- Achievements Section -->
         <section id="achievements-section" class="py-8 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
@@ -80,6 +97,7 @@
             </div>
         </section>
 
+        <!-- Our Unique Programs Section -->
         <section id="our-unique-programs" class="py-16 bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-12 drop-shadow-md animate-on-scroll">Our Unique Programs</h2>
@@ -124,6 +142,7 @@
             </div>
         </section>
 
+        <!-- Kit Sales Section -->
         <section id="kit-sales-section" class="py-16 bg-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-indigo-700 mb-8 animate-on-scroll">Affordable Robotics & Electronics Kits for Sale!</h2>
@@ -139,55 +158,49 @@
             </div>
         </section>
 
+        <!-- Why Choose Us Section -->
         <section id="why-choose-us" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Why Choose S.K Robotics?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center items-stretch">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 text-center items-stretch">
                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-lightbulb text-5xl text-yellow-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Affordable, Quality Training</h3>
-                        <p class="text-gray-600 flex-grow">We provide top-notch hands-on learning at a cost that’s accessible to all students without compromising quality.
-</p>
+                        <p class="text-gray-600 flex-grow">We provide top-notch hands-on learning at a cost that’s accessible to all students without compromising quality.</p>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-chalkboard-teacher text-5xl text-green-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Hands-On Learning Without Expensive Kits</h3>
-                        <p class="text-gray-600 flex-grow">Unlike other programs, we don’t rely on costly product-based kits. Instead, we focus on building skills using open-source hardware and software, giving you the freedom to experiment and innovate.
-</p>
+                        <p class="text-gray-600 flex-grow">Unlike other programs, we don’t rely on costly product-based kits. Instead, we focus on building skills using open-source hardware and software, giving you the freedom to experiment and innovate.</p>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-award text-5xl text-blue-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Open-Source Tools for Creativity</h3>
-                        <p class="text-gray-600 flex-grow"> Our training uses open-source platforms, enabling you to explore, customize, and create without limitations or extra expenses.
-</p>
+                        <p class="text-gray-600 flex-grow">Our training uses open-source platforms, enabling you to explore, customize, and create without limitations or extra expenses.</p>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
                         <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Industry 5.0 Ready Skills</h3>
-                        <p class="text-gray-600 flex-grow">Our curriculum is designed to prepare you for the future, combining human creativity with cutting-edge technology.
-</p>
+                        <p class="text-gray-600 flex-grow">Our curriculum is designed to prepare you for the future, combining human creativity with cutting-edge technology.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
+                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
+                        <i class="fas fa-user-friends text-5xl text-orange-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Mentorship</h3>
-                        <p class="text-gray-600 flex-grow">Whether you’re a school student or a career aspirant, our experienced mentors guide you every step of the way.
-</p>
+                        <p class="text-gray-600 flex-grow">Whether you’re a school student or a career aspirant, our experienced mentors guide you every step of the way.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
+                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
+                        <i class="fas fa-project-diagram text-5xl text-teal-500 mb-4 animate-icon-pulse"></i>
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-World Project Experience</h3>
-                        <p class="text-gray-600 flex-grow">Learn by building real projects that develop your problem-solving skills and boost your confidence.
-</p>
+                        <p class="text-gray-600 flex-grow">Learn by building real projects that develop your problem-solving skills and boost your confidence.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Projects in Action Section -->
         <section id="projects-in-action" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Our Projects in Action</h2>
-                <!-- Removed the kit description paragraph from here as it's now in its own section -->
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
                         <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751557848/WhatsApp_Image_2025-07-03_at_9.19.35_PM_nnqflv.jpg" alt="Breadboard Electronics Kit" class="w-full h-48 object-cover">
@@ -238,6 +251,7 @@
             </div>
         </section>
 
+        <!-- Founder Section -->
         <section id="founder-section" class="py-16 bg-white">
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12 animate-on-scroll">
                 <div class="md:w-1/3 flex justify-center">
@@ -252,13 +266,40 @@
                 </div>
             </div>
         </section>
-
     </main>
 
+    <!-- Anniversary Modal - Bootstrap Component -->
+    <div class="modal fade" id="anniversaryModal" tabindex="-1" aria-labelledby="anniversaryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-xl shadow-2xl border-none">
+                <div class="modal-header bg-gradient-to-r from-purple-600 to-indigo-700 text-white border-b-0 rounded-t-xl">
+                    <h5 class="modal-title font-extrabold text-2xl" id="anniversaryModalLabel">Happy 1 Year Anniversary!</h5>
+                    <button type="button" class="btn-close text-white opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-8 text-center">
+                    <p class="text-gray-700 text-lg mb-6">
+                        We're incredibly proud to celebrate one year of empowering young minds through robotics and technology. Thank you for being part of our journey!
+                    </p>
+                    <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1754194124/1year_qnjjyp.jpg" 
+                         alt="SK Robotics 1 Year Anniversary" 
+                         class="mx-auto rounded-lg shadow-xl w-full max-w-sm object-cover border-4 border-gray-200">
+                </div>
+                <div class="modal-footer justify-center bg-gray-50 border-t-0 rounded-b-xl">
+                    <a href="about.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                        Learn More About Us
+                    </a>
+                    <button type="button" class="btn bg-gray-200 text-gray-700 font-semibold py-2 px-6 rounded-full transition duration-300 hover:bg-gray-300" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chatbot Button -->
     <button id="chatbot-toggle-btn" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-50">
         <i class="fas fa-comments text-2xl"></i>
     </button>
 
+    <!-- Chatbot Modal -->
     <div id="chatbot-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[100] hidden">
         <div class="bg-white rounded-lg shadow-xl w-11/12 md:w-1/2 lg:w-1/3 h-3/4 flex flex-col overflow-hidden">
             <div class="bg-indigo-600 text-white p-4 flex justify-between items-center rounded-t-lg">
@@ -269,7 +310,8 @@
             </div>
 
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-100 flex flex-col space-y-3">
-                </div>
+                <!-- Chat messages will be appended here -->
+            </div>
 
             <div class="p-4 bg-gray-200 flex items-center rounded-b-lg">
                 <input type="text" id="chat-input" placeholder="Type your message..."
@@ -281,6 +323,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
@@ -299,35 +342,35 @@
                     <li><a href="contact.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Contact Us</a></li>
                 </ul>
             </div>
-   <div>
-    <h3 class="text-xl font-bold text-indigo-300 mb-4">Contact Info</h3>
-    <p class="text-gray-400 mb-2">
-        <!-- Changed to fa-phone for a more traditional phone icon -->
-        <i class="fas fa-phone mr-2"></i>
-        <a href="tel:+919688987156" class="hover:underline">+91 9688987156</a>
-    </p>
-    <p class="text-gray-400 mb-2">
-        <a href="https://wa.me/919688987156" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-600 transition duration-300">
-            <i class="fab fa-whatsapp text-xl mr-2"></i> +91 9688987156
-        </a>
-    </p>
-    <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i>skroboticsstem@gmail.com</p>
-    <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i>281 UKPM Square, NH83, Gandhi Nagar, Udumalpet</p>
-    <div class="flex justify-center md:justify-start space-x-4 mt-6">
-        <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
-        <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
-        <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-        <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
-    </div>
-</div>
-
-
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">Contact Info</h3>
+                <p class="text-gray-400 mb-2">
+                    <i class="fas fa-phone mr-2"></i>
+                    <a href="tel:+919688987156" class="hover:underline">+91 9688987156</a>
+                </p>
+                <p class="text-gray-400 mb-2">
+                    <a href="https://wa.me/919688987156" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-600 transition duration-300">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> +91 9688987156
+                    </a>
+                </p>
+                <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i>skroboticsstem@gmail.com</p>
+                <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i>281 UKPM Square, NH83, Gandhi Nagar, Udumalpet</p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
         </div>
         <div class="text-center text-gray-500 text-sm mt-10">
             &copy; 2025 SK Robotics. All rights reserved.
         </div>
     </footer>
-
+    
+    <!-- Bootstrap JS for Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
     <script src="./js/script.js"></script>
 </body>
 </html>

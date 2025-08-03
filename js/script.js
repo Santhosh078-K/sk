@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const formMessage = document.getElementById('form-message');
 
     // Get elements for the LLM features (from courses.html and programs.html)
-    // Removed generateSyllabusButtons as the buttons are removed from HTML
     const workshopTopicInput = document.getElementById('workshop-topic-input');
     const generateWorkshopBtn = document.getElementById('generate-workshop-btn');
     const workshopOutput = document.getElementById('workshop-output');
@@ -63,6 +62,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // --- Automatic Anniversary Modal on Page Load ---
+    // This is the new logic to display the modal automatically.
+    // It will only run on the homepage (index.html)
+    if (document.getElementById('anniversaryModal')) {
+        // Use a small timeout to ensure Bootstrap's JS has fully loaded.
+        setTimeout(() => {
+            const myModal = new bootstrap.Modal(document.getElementById('anniversaryModal'));
+            myModal.show();
+        }, 500); // 500ms delay should be sufficient.
+    }
+    
     // --- Animation and Interaction Enhancements ---
 
     // Function to add a class for fade-in effect on scroll
