@@ -209,3 +209,8 @@ html {
     opacity: 1;
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
+
+/* Map Iframe Styling */
+.map-container iframe {
+    border: 0;
+}

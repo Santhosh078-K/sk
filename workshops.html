@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Robotics: Workshops & Training</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Bootstrap CSS for carousels if needed -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .workshop-card {
+            transition: all 0.3s ease;
+        }
+        .workshop-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-10 sm:h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">About Us</a>
+                <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Courses</a>
+                <a href="workshops.html" class="nav-link text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Workshops</a>
+                <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Programs</a>
+                <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Milestones</a>
+                <a href="registration.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Register</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-2">
+            <nav class="flex flex-col items-center space-y-2">
+                <a href="index.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Home</a>
+                <a href="about.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">About Us</a>
+                <a href="courses.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Courses</a>
+                <a href="workshops.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300 active">Workshops</a>
+                <a href="programs.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Programs</a>
+                <a href="milestones.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Milestones</a>
+                <a href="registration.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Register</a>
+                <a href="contact.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="gradient-bg py-20 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 animate-on-scroll">Transformative Robotics Workshops</h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-on-scroll opacity-90">
+                    Empowering students and professionals through hands-on technical training, innovation, and practical problem-solving.
+                </p>
+                <a href="#workshop-categories" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Explore Workshops
+                </a>
+            </div>
+        </section>
+
+        <!-- Workshop Categories -->
+        <section id="workshop-categories" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Our Workshop Specialized Modules</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- School Workshop -->
+                    <div class="workshop-card bg-gray-50 rounded-2xl overflow-hidden shadow-md animate-on-scroll">
+                        <img src="./Images/workshop_school.png" alt="School Workshop" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">School Level Workshops (Grades 3-12)</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Our school workshops are designed to spark curiosity and build foundational STEM skills. We align with the National Education Policy (NEP) to provide experiential learning.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Breadboard Electronics Basics</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Introduction to Arduino & Sensors</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Build Your Own Line Follower Robot</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> 100+ Real-time Project Demonstrations</li>
+                            </ul>
+                            <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">Book for Your School</a>
+                        </div>
+                    </div>
+
+                    <!-- College Workshop -->
+                    <div class="workshop-card bg-gray-50 rounded-2xl overflow-hidden shadow-md animate-on-scroll">
+                        <img src="./Images/workshop_college.png" alt="College Workshop" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">College Level Technical Workshops</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Advanced technical sessions for Engineering, Arts & Science, and Polytechnic colleges. Focused on industry-ready skills and technical excellence.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Embedded Systems & Microcontrollers</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> PCB Design & Fabrication</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Advanced Robotics & Kinematics</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Industry 5.0 Preparation</li>
+                            </ul>
+                            <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">Enquire for College</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Masterclass -->
+                    <div class="workshop-card bg-gray-50 rounded-2xl overflow-hidden shadow-md animate-on-scroll">
+                        <img src="./Images/workshop_ai.png" alt="AI Workshop" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">AI & Machine Learning Masterclass</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Explore the future with our Artificial Intelligence workshops. Learn concepts from basic logic to advanced neural networks and their application in robotics.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> AI Concepts & Visualizations</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Python for AI</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Image Processing for Robots</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Machine Learning Models</li>
+                            </ul>
+                            <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">Join Masterclass</a>
+                        </div>
+                    </div>
+
+                    <!-- IoT Workshop -->
+                    <div class="workshop-card bg-gray-50 rounded-2xl overflow-hidden shadow-md animate-on-scroll">
+                        <img src="./Images/workshop_iot.png" alt="IoT Workshop" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">IoT & Smart Systems Workshop</h3>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Connect the world through Internet of Things. Learn to build smart home systems, remote monitoring devices, and cloud-connected automation.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Wi-Fi Microcontrollers (ESP8266/ESP32)</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Cloud Data Logging & Dashboards</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Home Automation Projects</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-green-500 mr-3"></i> Mobile App Integration</li>
+                            </ul>
+                            <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">Learn IoT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshop Features -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Why Our Workshops Stand Out</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-white rounded-xl shadow-sm animate-on-scroll">
+                        <i class="fas fa-tools text-4xl text-indigo-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">100% Practical</h4>
+                        <p class="text-gray-600">No boring lectures. Every minute is spent building, coding, and experimenting.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-sm animate-on-scroll">
+                        <i class="fas fa-certificate text-4xl text-indigo-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Certified Training</h4>
+                        <p class="text-gray-600">Receive government-recognized certification upon successful completion.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-sm animate-on-scroll">
+                        <i class="fas fa-users text-4xl text-indigo-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Expert Mentorship</h4>
+                        <p class="text-gray-600">Learn from Sabarinathan Dhandapani and 200+ session experts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">SK Robotics</h3>
+                <p class="text-gray-400">Empowering the next generation of innovators through hands-on robotics education.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">About Us</a></li>
+                    <li><a href="courses.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Courses</a></li>
+                    <li><a href="workshops.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Workshops</a></li>
+                    <li><a href="programs.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
+                    <li><a href="milestones.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Milestones</a></li>
+                    <li><a href="registration.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Register</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">Contact Info</h3>
+                <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +91 9688987156</p>
+                <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i> skroboticsstem@gmail.com</p>
+                <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i> 281 UKPM Square, NH83, Udumalpet</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm mt-10">
+            &copy; 2025 SK Robotics. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
