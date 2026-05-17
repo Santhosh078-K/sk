@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Partnership Details | SK Robotics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-10 sm:h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">About Us</a>
+                <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">Courses</a>
+                <a href="workshops.html" class="nav-link text-indigo-600 font-medium transition duration-300 py-2 px-3 active">Workshops</a>
+                <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">Programs</a>
+                <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">Milestones</a>
+                <a href="registration.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">Register</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-16">
+        <section class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-8 text-sm text-gray-500">
+                <a href="workshops.html" class="hover:text-indigo-600">Workshops</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-800 font-medium">Institutional Collaboration</span>
+            </nav>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <!-- Image Gallery / Main Image -->
+                    <div class="md:w-1/2">
+                        <img id="main-image" src="./Images/workshop_college.png" alt="Institution Workshop" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <div id="badge" class="inline-block bg-indigo-100 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Engineering Collaboration</div>
+                        <h1 id="title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Advancing Technical Excellence Together</h1>
+                        
+                        <p id="description" class="text-gray-600 text-lg leading-relaxed mb-8">
+                            Our partnership with leading institutions focuses on delivering high-impact, hands-on technical training. We bridge the gap between academic theory and industrial application through customized workshop modules.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-lg text-green-600 mr-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-semibold uppercase">Total Trained</p>
+                                    <p class="text-lg font-bold text-gray-800">500+ Students</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-lg text-blue-600 mr-3">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-semibold uppercase">Program Type</p>
+                                    <p id="type" class="text-lg font-bold text-gray-800">Workshop Series</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 pt-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Key Focus Areas</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-indigo-500 mr-3"></i> Industry 5.0 Skillset Integration</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-indigo-500 mr-3"></i> Real-time Project Development</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-indigo-500 mr-3"></i> Government Recognized Certification</li>
+                                <li class="flex items-center text-gray-600"><i class="fas fa-check-circle text-indigo-500 mr-3"></i> Expert Mentorship from Industry Leaders</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                                Book a Workshop for Your Institution
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Partner With Us Section -->
+            <div class="mt-20">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Benefits for Your Institution</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-indigo-600 text-white p-8 rounded-3xl shadow-xl transform transition hover:-translate-y-2">
+                        <div class="bg-white/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Enhanced Ranking</h4>
+                        <p class="text-indigo-100 text-sm">Improve your institution's NAAC/NIRF rankings by showcasing industry-aligned technical collaborations.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 transform transition hover:-translate-y-2">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-briefcase text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Placement Edge</h4>
+                        <p class="text-gray-500 text-sm">Equip students with high-demand skills in AI and Robotics, leading to better placement records.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 transform transition hover:-translate-y-2">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-lightbulb text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Innovation Hub</h4>
+                        <p class="text-gray-500 text-sm">Foster a culture of research and innovation by establishing a functional robotics ecosystem on campus.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 transform transition hover:-translate-y-2">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">MoU Support</h4>
+                        <p class="text-gray-500 text-sm">Formalize long-term technical support and knowledge sharing through structured MoUs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Workflow -->
+            <div class="mt-24 bg-gray-900 rounded-[3rem] p-8 md:p-16 text-white">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Our Implementation Process</h2>
+                    <div class="space-y-12 relative before:absolute before:left-[1.25rem] md:before:left-1/2 before:top-0 before:bottom-0 before:w-0.5 before:bg-indigo-500/30">
+                        <!-- Step 1 -->
+                        <div class="relative flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-indigo-400">01. Needs Assessment</h4>
+                                <p class="text-gray-400 mt-2">We analyze the institution's requirements and student skill levels to customize the modules.</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-indigo-600 rounded-full border-4 border-gray-900 z-10 flex items-center justify-center font-bold">1</div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="relative flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12"></div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-indigo-600 rounded-full border-4 border-gray-900 z-10 flex items-center justify-center font-bold">2</div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <h4 class="text-xl font-bold text-indigo-400">02. Setup & Logistics</h4>
+                                <p class="text-gray-400 mt-2">Coordination of hardware kits, software environments, and lab scheduling for the sessions.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="relative flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-indigo-400">03. Practical Training</h4>
+                                <p class="text-gray-400 mt-2">Intensive hands-on sessions led by expert mentors, focusing on project building.</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-indigo-600 rounded-full border-4 border-gray-900 z-10 flex items-center justify-center font-bold">3</div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="relative flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12"></div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-indigo-600 rounded-full border-4 border-gray-900 z-10 flex items-center justify-center font-bold">4</div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <h4 class="text-xl font-bold text-indigo-400">04. Certification & Closure</h4>
+                                <p class="text-gray-400 mt-2">Final project assessments, certificate distribution, and outcome reporting to the management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specific Enquiry Form -->
+            <div class="mt-24 max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Partner With Us</h2>
+                    <p class="text-gray-500 mt-2">Fill the details below to receive a customized proposal for your institution.</p>
+                </div>
+                <form action="https://formspree.io/f/xvgrldpv" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="md:col-span-2">
+                        <label for="inst-name" class="block text-sm font-bold text-gray-700 mb-2">Institution Name</label>
+                        <input type="text" id="inst-name" name="institution" required placeholder="e.g., ABC Engineering College" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="contact-name" class="block text-sm font-bold text-gray-700 mb-2">Contact Person Name</label>
+                        <input type="text" id="contact-name" name="contact_name" required placeholder="Your Full Name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="designation" class="block text-sm font-bold text-gray-700 mb-2">Designation</label>
+                        <input type="text" id="designation" name="designation" required placeholder="e.g., Principal, HOD" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="institution@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="reqs" class="block text-sm font-bold text-gray-700 mb-2">Message/Requirements</label>
+                        <textarea id="reqs" name="message" rows="4" placeholder="How can we help your institution?" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none transition"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
+                            Send Partnership Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 SK Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle dynamic content if needed via URL params
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const type = params.get('type');
+            
+            if (type === 'school') {
+                document.getElementById('badge').innerText = 'School Collaboration';
+                document.getElementById('badge').classList.replace('bg-indigo-100', 'bg-green-100');
+                document.getElementById('badge').classList.replace('text-indigo-600', 'text-green-600');
+                document.getElementById('title').innerText = 'Fostering Young Minds in Schools';
+                document.getElementById('description').innerText = 'Our school programs are designed to spark curiosity and build foundational STEM skills through experiential learning and robot-building competitions.';
+                document.getElementById('main-image').src = './Images/school_partnership_1.png';
+                document.getElementById('type').innerText = 'STEM Program';
+            } else if (type === 'college') {
+                document.getElementById('main-image').src = './Images/college_partnership_1.png';
+            }
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const nav = document.querySelector('nav.hidden');
+            
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    nav.classList.toggle('hidden');
+                    nav.classList.toggle('flex');
+                    nav.classList.toggle('flex-col');
+                    nav.classList.toggle('absolute');
+                    nav.classList.toggle('top-16');
+                    nav.classList.toggle('left-0');
+                    nav.classList.toggle('w-full');
+                    nav.classList.toggle('bg-white');
+                    nav.classList.toggle('p-4');
+                    nav.classList.toggle('shadow-md');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
