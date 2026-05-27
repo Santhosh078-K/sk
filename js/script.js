@@ -2,6 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get the mobile menu elements
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    
+    // Proper Mobile Menu Toggle Logic
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle between bars and x icon for better UX
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
     // Get the registration form and message box (only relevant on registration.html)
@@ -660,4 +676,162 @@ document.addEventListener('DOMContentLoaded', () => {
     if (achievementsDisplay) { // Renamed from achievementsDisplay to milestonesDisplay for clarity, but keeping original ID for now
         renderMilestones();
     }
+    
+    // --- Premium Features: Scroll Progress & Back to Top ---
+    
+    // 1. Inject Scroll Progress Bar
+    const progressBarContainer = document.createElement('div');
+    progressBarContainer.style.position = 'fixed';
+    progressBarContainer.style.top = '0';
+    progressBarContainer.style.left = '0';
+    progressBarContainer.style.width = '100%';
+    progressBarContainer.style.height = '4px';
+    progressBarContainer.style.zIndex = '9999';
+    progressBarContainer.style.background = 'transparent';
+    
+    const progressBar = document.createElement('div');
+    progressBar.style.height = '100%';
+    progressBar.style.width = '0%';
+    progressBar.style.background = 'linear-gradient(to right, #818cf8, #c084fc)'; // indigo-400 to purple-400
+    progressBar.style.transition = 'width 0.1s ease';
+    
+    progressBarContainer.appendChild(progressBar);
+    document.body.appendChild(progressBarContainer);
+    
+    // 2. Inject Scroll to Top Button
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    scrollTopBtn.className = 'fixed bottom-24 right-6 bg-purple-600 text-white w-12 h-12 rounded-full shadow-xl hover:bg-purple-700 hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center opacity-0 pointer-events-none translate-y-10';
+    scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+    document.body.appendChild(scrollTopBtn);
+    
+    // Scroll Event Listener
+    window.addEventListener('scroll', () => {
+        // Progress Bar Logic
+        const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (windowScroll / height) * 100;
+        progressBar.style.width = scrolled + '%';
+        
+        // Scroll to Top Logic
+        if (windowScroll > 300) {
+            scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
+            scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+            scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-10');
+            scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+        }
+    });
+    
+    // Scroll to Top Click
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // 3. Stats Counter Animation
+    const animateCounters = () => {
+        const counters = document.querySelectorAll('.stat-counter');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = parseInt(target.getAttribute('data-target'));
+                    const duration = 2000; // 2 seconds
+                    const increment = finalValue / (duration / 16); // roughly 60fps
+                    let currentValue = 0;
+                    
+                    const updateCounter = () => {
+                        currentValue += increment;
+                        if (currentValue < finalValue) {
+                            target.innerText = Math.ceil(currentValue) + '+';
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            target.innerText = finalValue + '+';
+                        }
+                    };
+                    updateCounter();
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => observer.observe(counter));
+    };
+    
+    animateCounters();
+
+    // 4. Typing Effect for Hero Section
+    const typedTextSpan = document.getElementById('typed-text');
+    if (typedTextSpan) {
+        const textArray = ["Welcome to <br> <span class='bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>S.K Robotics</span>", "Learn. Build. Innovate.", "Design Your Future."];
+        const typingDelay = 50;
+        const erasingDelay = 30;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                let char = textArray[textArrayIndex].charAt(charIndex);
+                if (char === '<') {
+                    const closingIndex = textArray[textArrayIndex].indexOf('>', charIndex);
+                    if (closingIndex !== -1) {
+                        const tag = textArray[textArrayIndex].substring(charIndex, closingIndex + 1);
+                        typedTextSpan.innerHTML += tag;
+                        charIndex = closingIndex + 1;
+                    }
+                } else {
+                    typedTextSpan.innerHTML += char;
+                    charIndex++;
+                }
+                setTimeout(type, typingDelay);
+            } else {
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                let currentHTML = typedTextSpan.innerHTML;
+                if (currentHTML.endsWith('>')) {
+                    const openingIndex = currentHTML.lastIndexOf('<');
+                    if (openingIndex !== -1) {
+                        typedTextSpan.innerHTML = currentHTML.substring(0, openingIndex);
+                        charIndex -= (currentHTML.length - openingIndex);
+                    }
+                } else {
+                    typedTextSpan.innerHTML = currentHTML.substring(0, currentHTML.length - 1);
+                    charIndex--;
+                }
+                setTimeout(erase, erasingDelay);
+            } else {
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 500);
+            }
+        }
+
+        setTimeout(type, newTextDelay);
+    }
+
+    // 5. FAQ Accordion Logic
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            const icon = toggle.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus', 'rotate-180');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus', 'rotate-180');
+            }
+        });
+    });
 });

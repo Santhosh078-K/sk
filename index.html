@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.K Robotics: Shaping Future Innovators</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="S.K Robotics is a premier training center in Udumalpet, Tamil Nadu, offering hands-on courses in Breadboard Electronics, Arduino Automation, Robotics, IoT, and AI for students from Grade 3 to 12.">
+    <meta name="keywords" content="Robotics, Electronics, Arduino, IoT, AI, STEM, Coding, Summer Camp, Udumalpet, S.K Robotics">
+    <meta name="author" content="Sabarinathan Dhandapani">
+    <meta property="og:title" content="S.K Robotics: Shaping Future Innovators">
+    <meta property="og:description" content="Empowering the next generation of innovators through hands-on robotics education and cutting-edge technology programs.">
+    <meta property="og:type" content="website">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
@@ -17,82 +25,98 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans selection:bg-indigo-500 selection:text-white">
 
     <!-- Header -->
-    <header class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header class="bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-sm fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center">
-                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-10 sm:h-12 w-auto">
+            <a href="index.html" class="flex items-center transform transition duration-300 hover:scale-105">
+                <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-12 sm:h-14 w-auto rounded-xl shadow-sm">
             </a>
             <!-- Navigation -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3 active">Home</a>
-                <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">About Us</a>
-                <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Courses</a>
-                <a href="workshops.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Workshops</a>
-                <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Programs</a>
-                <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Milestones</a>
-                <a href="registration.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Register</a>
-                <a href="contact.html" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md py-2 px-3">Contact Us</a>
+            <nav class="hidden md:flex space-x-2 lg:space-x-4">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-indigo-600 font-semibold transition-colors duration-300 rounded-lg py-2 px-3 active hover:bg-indigo-50">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-indigo-600 font-semibold transition-colors duration-300 rounded-lg py-2 px-3 hover:bg-indigo-50">About Us</a>
+                <a href="courses.html" class="nav-link text-gray-600 hover:text-indigo-600 font-semibold transition-colors duration-300 rounded-lg py-2 px-3 hover:bg-indigo-50">Courses</a>
+                <a href="workshops.html" class="nav-link text-gray-600 hover:text-indigo-600 font-semibold transition-colors duration-300 rounded-lg py-2 px-3 hover:bg-indigo-50">Workshops</a>
+                <a href="programs.html" class="nav-link text-gray-600 hover:text-indigo-600 font-semibold transition-colors duration-300 rounded-lg py-2 px-3 hover:bg-indigo-50">Programs</a>
+                <a href="milestones.html" class="nav-link text-gray-600 hover:text-indigo-600 font-semibold transition-colors duration-300 rounded-lg py-2 px-3 hover:bg-indigo-50">Milestones</a>
+                <a href="registration.html" class="inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:shadow-indigo-500/30 hover:scale-105">Register</a>
             </nav>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none" aria-label="Toggle Navigation Menu">
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 hover:text-indigo-600 focus:outline-none p-2 rounded-lg bg-gray-100/50 backdrop-blur" aria-label="Toggle Navigation Menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-2">
-            <nav class="flex flex-col items-center space-y-2">
-                <a href="index.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300 active">Home</a>
-                <a href="about.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">About Us</a>
-                <a href="courses.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Courses</a>
-                <a href="workshops.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Workshops</a>
-                <a href="programs.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Programs</a>
-                <a href="milestones.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Milestones</a>
-                <a href="registration.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Register</a>
-                <a href="contact.html" class="nav-link block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-2 px-4 rounded-md transition duration-300">Contact Us</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-2xl py-4 absolute w-full left-0 top-full origin-top transition-all">
+            <nav class="flex flex-col items-center space-y-2 px-4">
+                <a href="index.html" class="nav-link block text-gray-800 font-semibold hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-3 px-4 rounded-xl transition duration-300 active">Home</a>
+                <a href="about.html" class="nav-link block text-gray-700 font-semibold hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-3 px-4 rounded-xl transition duration-300">About Us</a>
+                <a href="courses.html" class="nav-link block text-gray-700 font-semibold hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-3 px-4 rounded-xl transition duration-300">Courses</a>
+                <a href="workshops.html" class="nav-link block text-gray-700 font-semibold hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-3 px-4 rounded-xl transition duration-300">Workshops</a>
+                <a href="programs.html" class="nav-link block text-gray-700 font-semibold hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-3 px-4 rounded-xl transition duration-300">Programs</a>
+                <a href="milestones.html" class="nav-link block text-gray-700 font-semibold hover:bg-indigo-50 hover:text-indigo-600 w-full text-center py-3 px-4 rounded-xl transition duration-300">Milestones</a>
+                <a href="registration.html" class="nav-link block bg-indigo-600 text-white font-bold hover:bg-indigo-700 w-full text-center py-3 px-4 rounded-xl transition duration-300 mt-2 shadow-md">Register</a>
             </nav>
         </div>
     </header>
 
     <main class="pt-20">
         <!-- Hero Section with Dynamic Background -->
-        <section id="hero-section" class="min-h-screen bg-cover bg-center flex items-center relative transition-background">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
+        <section id="hero-section" class="min-h-screen bg-cover bg-center flex items-center relative transition-background overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/80 via-purple-900/60 to-black/80 backdrop-blur-[2px]"></div>
+            
+            <!-- Animated shapes behind text -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-[128px] opacity-40 animate-blob"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-[128px] opacity-40 animate-blob animation-delay-4000"></div>
+
             <div class="container mx-auto px-4 py-16 text-center text-white relative z-10 animate-on-scroll">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-                    Welcome to <br> S.K Robotics<br>
+                <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-indigo-200 text-sm font-semibold tracking-wider uppercase mb-6 shadow-xl">Igniting Young Minds</span>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading font-extrabold leading-tight mb-6 drop-shadow-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100">
+                    <span id="typed-text"></span><span class="animate-pulse font-light text-white ml-1">|</span>
                 </h1>
-                <p class="text-lg sm:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
-                    “Robotics is not about building machines
-                    it’s about building minds."<br><br>
-                    — Sabarinathan Dhandapani
+                <p class="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-md text-indigo-50/90 font-light leading-relaxed">
+                    “Robotics is not about building machines, <br class="hidden sm:block"> it’s about building minds.”<br>
+                    <span class="block mt-4 text-base font-semibold text-purple-300 tracking-wide">— Sabarinathan Dhandapani</span>
                 </p>
-                <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                    Register for a Class
-                </a>
-                <!-- The button to open the modal is now removed as per your request -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="registration.html" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-indigo-900 font-bold py-4 px-10 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:bg-indigo-50">
+                        Start Learning Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#our-unique-programs" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        Explore Programs
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Achievements Section -->
-        <section id="achievements-section" class="py-8 bg-gray-50">
-            <div class="container mx-auto px-4">
+        <section id="achievements-section" class="py-16 bg-white relative overflow-hidden">
+            <!-- decorative blob -->
+            <div class="absolute top-0 left-0 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+            <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-                    <div class="bg-[#3A7B6F] rounded-2xl shadow-lg p-6 flex items-center justify-center space-x-4 w-full max-w-sm">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABHklEQVR4nO2YQU7DMAyF/f80wYc2OHTBkx/mXmxgx/m3gRkYv+4b8k2pXUnyPcmW0tJ/pCQc+97f8ySdw9zK7KxG3gE5YAtYApb9gA3gY41uATPAIqAF7A/R6oDXwEpgl28JzAPf/xRAB2gE47/7k8BNYGkE7wFvge+JmYcE+AFM+F6Y+U+Am8D/nL4LzAYuF3qvgA/AGmCVB02yV6oCXy+p/B9428Q9l4Hj4aJd/n+rP/j7rC9Lgf3gG3A0U5NdgXn+G/B9c3V1D8B97j9TAnb3fS8oATvAVvAfsD9HqwPeA98T/Qz0iT4Bw2K+f/E/309j/1UBLoP8zT+K0gI/Qz1fD0y8+b3gG+f7F6C+W2n+J9j4o8C6xP9j7z2f2n+Pj/L/m+f77rGfB74L+r/Z+g/gR3G/2uD8A6+Zvw/c+F3+8f+28H3e/8D9+pP+g/zD8B/B+0U9v2Qf8T92/d/3kU9s+Qf4B3L/j9d//v/pD+T5A/h/+j/S/h/2X/tA3i3i3kX8l3J9z8J3wE/F3o4r/yPAAAAAElFTkSuQmCC" alt="Beneficiaries Icon" class="w-12 h-12">
+                    <div class="group bg-gradient-to-br from-[#1F2937] to-[#111827] rounded-3xl shadow-xl p-8 flex items-center justify-center space-x-6 w-full max-w-md transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(31,41,55,0.3)] border border-gray-800">
+                        <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-4 rounded-2xl shadow-inner group-hover:scale-110 transition-transform duration-500">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABHklEQVR4nO2YQU7DMAyF/f80wYc2OHTBkx/mXmxgx/m3gRkYv+4b8k2pXUnyPcmW0tJ/pCQc+97f8ySdw9zK7KxG3gE5YAtYApb9gA3gY41uATPAIqAF7A/R6oDXwEpgl28JzAPf/xRAB2gE47/7k8BNYGkE7wFvge+JmYcE+AFM+F6Y+U+Am8D/nL4LzAYuF3qvgA/AGmCVB02yV6oCXy+p/B9428Q9l4Hj4aJd/n+rP/j7rC9Lgf3gG3A0U5NdgXn+G/B9c3V1D8B97j9TAnb3fS8oATvAVvAfsD9HqwPeA98T/Qz0iT4Bw2K+f/E/309j/1UBLoP8zT+K0gI/Qz1fD0y8+b3gG+f7F6C+W2n+J9j4o8C6xP9j7z2f2n+Pj/L/m+f77rGfB74L+r/Z+g/gR3G/2uD8A6+Zvw/c+F3+8f+28H3e/8D9+pP+g/zD8B/B+0U9v2Qf8T92/d/3kU9s+Qf4B3L/j9d//v/pD+T5A/h/+j/S/h/2X/tA3i3i3kX8l3J9z8J3wE/F3o4r/yPAAAAAElFTkSuQmCC" alt="Beneficiaries Icon" class="w-10 h-10 filter invert">
+                        </div>
                         <div class="text-white">
-                            <p class="text-4xl font-bold">2,700+</p>
-                            <p class="text-lg">Beneficiaries</p>
+                            <p class="text-5xl font-heading font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-white">2,700+</p>
+                            <p class="text-gray-400 font-medium text-lg mt-1 tracking-wide uppercase text-sm">Beneficiaries</p>
                         </div>
                     </div>
-                    <div class="bg-[#3A7B6F] rounded-2xl shadow-lg p-6 flex items-center justify-center space-x-4 w-full max-w-sm">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVR4nO2YQYrDMAyF/f9MwYc2OHTBkx/mXmxgx/m3gRkYv+4b8k2pXUnyPcmW0tJ/pCQc+97f8ySdw9zK7KxG3gE5YAtYApb9gA3gY41uATPAIqAF7A/R6oDXwEpgl28JzAPf/xRAB2gE47/7k8BNYGkE7wFvge+JmYcE+AFM+F6Y+U+Am8D/nL4LzAYuF3qvgA/AGmCVB02yV6oCXy+p/B9428Q9l4Hj4aJd/n+rP/j7rC9Lgf3gG3A0U5NdgXn+G/B9c3V1D8B97j9TAnb3fS8oATvAVvAfsD9HqwPeA98T/Qz0iT4Bw2K+f/E/309j/1UBLoP8zT+K0gI/Qz1fD0y8+b3gG+f7F6C+W2n+J9j4o8C6xP9j7z2f2n+Pj/L/m+f77rGfB74L+r/Z+g/gR3G/2uD8A6+Zvw/c+F3+8f+28H3e/8D9+pP+g/zD8B/B+0U9v2Qf8T92/d/3kU9s+Qf4B3L/j9d//v/pD+T5A/h/+j/S/h/2X/tA3i3i3kX8l3J9z8J3wE/F3o4r/yPAAAAAElFTkSuQmCC" alt="Workshops Icon" class="w-12 h-12">
+                    
+                    <div class="group bg-gradient-to-br from-[#1F2937] to-[#111827] rounded-3xl shadow-xl p-8 flex items-center justify-center space-x-6 w-full max-w-md transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(31,41,55,0.3)] border border-gray-800">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-500 p-4 rounded-2xl shadow-inner group-hover:scale-110 transition-transform duration-500">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVR4nO2YQYrDMAyF/f9MwYc2OHTBkx/mXmxgx/m3gRkYv+4b8k2pXUnyPcmW0tJ/pCQc+97f8ySdw9zK7KxG3gE5YAtYApb9gA3gY41uATPAIqAF7A/R6oDXwEpgl28JzAPf/xRAB2gE47/7k8BNYGkE7wFvge+JmYcE+AFM+F6Y+U+Am8D/nL4LzAYuF3qvgA/AGmCVB02yV6oCXy+p/B9428Q9l4Hj4aJd/n+rP/j7rC9Lgf3gG3A0U5NdgXn+G/B9c3V1D8B97j9TAnb3fS8oATvAVvAfsD9HqwPeA98T/Qz0iT4Bw2K+f/E/309j/1UBLoP8zT+K0gI/Qz1fD0y8+b3gG+f7F6C+W2n+J9j4o8C6xP9j7z2f2n+Pj/L/m+f77rGfB74L+r/Z+g/gR3G/2uD8A6+Zvw/c+F3+8f+28H3e/8D9+pP+g/zD8B/B+0U9v2Qf8T92/d/3kU9s+Qf4B3L/j9d//v/pD+T5A/h/+j/S/h/2X/tA3i3i3kX8l3J9z8J3wE/F3o4r/yPAAAAAElFTkSuQmCC" alt="Workshops Icon" class="w-10 h-10 filter invert">
+                        </div>
                         <div class="text-white">
-                            <p class="text-4xl font-bold">30+</p>
-                            <p class="text-lg">Workshops & Training Program</p>
+                            <p class="text-5xl font-heading font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-white">30+</p>
+                            <p class="text-gray-400 font-medium text-lg mt-1 tracking-wide uppercase text-sm">Workshops & Training</p>
                         </div>
                     </div>
                 </div>
@@ -100,152 +124,248 @@
         </section>
 
         <!-- Our Unique Programs Section -->
-        <section id="our-unique-programs" class="py-16 bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-12 drop-shadow-md animate-on-scroll">Our Unique Programs</h2>
+        <section id="our-unique-programs" class="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-[#111827] text-white relative overflow-hidden">
+            <!-- decorative blobs -->
+            <div class="absolute top-1/2 left-0 w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl sm:text-5xl font-heading font-extrabold mb-16 drop-shadow-md animate-on-scroll text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">Our Unique Programs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
 
-                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
-                        <img src="https://placehold.co/100x100/6366F1/FFFFFF?text=Weekend" alt="Weekend Class Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-indigo-200">
-                        <h3 class="text-xl font-semibold mb-2">Weekend Class</h3>
-                        <p class="text-gray-600 text-center flex-grow">Engage in hands-on robotics projects every Saturday and Sunday.</p>
-                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    <div class="group bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl p-8 flex flex-col items-center transform transition duration-500 hover:-translate-y-3 hover:bg-white/20 hover:border-white/30 animate-on-scroll h-full">
+                        <div class="bg-gradient-to-br from-indigo-400 to-indigo-600 p-1 rounded-full mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://placehold.co/100x100/6366F1/FFFFFF?text=Weekend" alt="Weekend Class Icon" class="w-20 h-20 rounded-full object-cover border-4 border-white/20">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading tracking-wide">Weekend Class</h3>
+                        <p class="text-indigo-100/80 text-center flex-grow text-sm leading-relaxed">Engage in hands-on robotics projects every Saturday and Sunday.</p>
+                        <a href="programs.html" class="mt-6 inline-block bg-white text-indigo-900 hover:bg-indigo-50 font-bold py-2.5 px-8 rounded-full transition duration-300 shadow-xl text-sm uppercase tracking-wider">Explore</a>
                     </div>
 
-                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
-                        <img src="https://placehold.co/100x100/8B5CF6/FFFFFF?text=Regular" alt="Regular Class Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-purple-200">
-                        <h3 class="text-xl font-semibold mb-2">Regular Class</h3>
-                        <p class="text-gray-600 text-center flex-grow">Structured weekday sessions for in-depth learning and consistent progress.</p>
-                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    <div class="group bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl p-8 flex flex-col items-center transform transition duration-500 hover:-translate-y-3 hover:bg-white/20 hover:border-white/30 animate-on-scroll h-full">
+                        <div class="bg-gradient-to-br from-purple-400 to-purple-600 p-1 rounded-full mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://placehold.co/100x100/8B5CF6/FFFFFF?text=Regular" alt="Regular Class Icon" class="w-20 h-20 rounded-full object-cover border-4 border-white/20">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading tracking-wide">Regular Class</h3>
+                        <p class="text-indigo-100/80 text-center flex-grow text-sm leading-relaxed">Structured weekday sessions for in-depth learning and consistent progress.</p>
+                        <a href="programs.html" class="mt-6 inline-block bg-white text-purple-900 hover:bg-purple-50 font-bold py-2.5 px-8 rounded-full transition duration-300 shadow-xl text-sm uppercase tracking-wider">Explore</a>
                     </div>
 
-                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
-                        <img src="https://placehold.co/100x100/EC4899/FFFFFF?text=Internship" alt="Internship Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-pink-200">
-                        <h3 class="text-xl font-semibold mb-2">Internship</h3>
-                        <p class="text-gray-600 text-center flex-grow">Gain real-world experience with our immersive robotics internship programs.</p>
-                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    <div class="group bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl p-8 flex flex-col items-center transform transition duration-500 hover:-translate-y-3 hover:bg-white/20 hover:border-white/30 animate-on-scroll h-full">
+                        <div class="bg-gradient-to-br from-pink-400 to-pink-600 p-1 rounded-full mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://placehold.co/100x100/EC4899/FFFFFF?text=Intern" alt="Internship Icon" class="w-20 h-20 rounded-full object-cover border-4 border-white/20">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading tracking-wide">Internship</h3>
+                        <p class="text-indigo-100/80 text-center flex-grow text-sm leading-relaxed">Gain real-world experience with our immersive robotics internship programs.</p>
+                        <a href="programs.html" class="mt-6 inline-block bg-white text-pink-900 hover:bg-pink-50 font-bold py-2.5 px-8 rounded-full transition duration-300 shadow-xl text-sm uppercase tracking-wider">Explore</a>
                     </div>
 
-                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
-                        <img src="https://placehold.co/100x100/10B981/FFFFFF?text=Vocational" alt="Vocational Training Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-green-200">
-                        <h3 class="text-xl font-semibold mb-2">Vocational Training</h3>
-                        <p class="text-gray-600 text-center flex-grow">Specialized training to prepare students for careers in robotics and automation.</p>
-                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    <div class="group bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl p-8 flex flex-col items-center transform transition duration-500 hover:-translate-y-3 hover:bg-white/20 hover:border-white/30 animate-on-scroll h-full">
+                        <div class="bg-gradient-to-br from-teal-400 to-teal-600 p-1 rounded-full mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://placehold.co/100x100/10B981/FFFFFF?text=Training" alt="Vocational Training Icon" class="w-20 h-20 rounded-full object-cover border-4 border-white/20">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading tracking-wide">Vocational</h3>
+                        <p class="text-indigo-100/80 text-center flex-grow text-sm leading-relaxed">Specialized training to prepare students for careers in robotics.</p>
+                        <a href="programs.html" class="mt-6 inline-block bg-white text-teal-900 hover:bg-teal-50 font-bold py-2.5 px-8 rounded-full transition duration-300 shadow-xl text-sm uppercase tracking-wider">Explore</a>
                     </div>
 
-                    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll h-full">
-                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=Lecture" alt="Guest Lecture Icon" class="w-24 h-24 mb-4 rounded-full object-cover border-4 border-blue-200">
-                        <h3 class="text-xl font-semibold mb-2">Guest Lecture</h3>
-                        <p class="text-gray-600 text-center flex-grow">Inspiring sessions from industry experts and robotics pioneers.</p>
-                        <a href="programs.html" class="mt-4 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Learn More</a>
+                    <div class="group bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl p-8 flex flex-col items-center transform transition duration-500 hover:-translate-y-3 hover:bg-white/20 hover:border-white/30 animate-on-scroll h-full">
+                        <div class="bg-gradient-to-br from-blue-400 to-blue-600 p-1 rounded-full mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=Lecture" alt="Guest Lecture Icon" class="w-20 h-20 rounded-full object-cover border-4 border-white/20">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading tracking-wide">Guest Lecture</h3>
+                        <p class="text-indigo-100/80 text-center flex-grow text-sm leading-relaxed">Inspiring sessions from industry experts and robotics pioneers.</p>
+                        <a href="programs.html" class="mt-6 inline-block bg-white text-blue-900 hover:bg-blue-50 font-bold py-2.5 px-8 rounded-full transition duration-300 shadow-xl text-sm uppercase tracking-wider">Explore</a>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-white relative overflow-hidden border-t border-gray-100">
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
+                    <div class="animate-on-scroll">
+                        <div class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-2 stat-counter" data-target="500">0+</div>
+                        <p class="text-gray-500 font-semibold uppercase tracking-wider text-sm">Students Trained</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <div class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2 stat-counter" data-target="50">0+</div>
+                        <p class="text-gray-500 font-semibold uppercase tracking-wider text-sm">Workshops Conducted</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <div class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500 mb-2 stat-counter" data-target="100">0+</div>
+                        <p class="text-gray-500 font-semibold uppercase tracking-wider text-sm">Projects Built</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <div class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 mb-2 stat-counter" data-target="25">0+</div>
+                        <p class="text-gray-500 font-semibold uppercase tracking-wider text-sm">Partner Institutions</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Kit Sales Section -->
-        <section id="kit-sales-section" class="py-16 bg-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-700 mb-8 animate-on-scroll">Affordable Robotics & Electronics Kits for Sale!</h2>
-                <div class="max-w-3xl mx-auto mb-12 animate-on-scroll text-lg text-gray-700 text-left">
-                    <p class="mb-4">S.K Robotics offers specially designed kits to enhance hands-on learning:</p>
-                    <ul class="list-disc list-inside space-y-2 pl-4">
-                        <li><strong>Level 1: Breadboard Electronics (Beginner)</strong></li>
-                        <li><strong>Level 2: Arduino Automation (Intermediate)</strong></li>
-                        <li><strong>Level 3: Robotics (Advanced)</strong></li>
-                    </ul>
-                    <p class="mt-4">Each kit includes components, instructions, and access to 100+ real-time projects, making it easy for students to learn by doing. Ideal for Grades 3 to 12, our kits are perfect for school projects, competitions, and personal innovation — all at affordable prices!</p>
+        <section id="kit-sales-section" class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-50"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 border border-gray-100 max-w-5xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 text-center mb-10 animate-on-scroll">Affordable Robotics & Electronics Kits for Sale!</h2>
+                    <div class="flex flex-col md:flex-row gap-12 items-center animate-on-scroll">
+                        <div class="md:w-1/2">
+                            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751557848/WhatsApp_Image_2025-07-03_at_9.19.35_PM_nnqflv.jpg" alt="Kit showcase" class="w-full rounded-2xl shadow-lg border-4 border-indigo-50 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                        </div>
+                        <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed">
+                            <p class="mb-6 font-medium text-gray-900">S.K Robotics offers specially designed kits to enhance hands-on learning:</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-4 font-bold shadow-inner">1</span> <strong>Level 1:</strong> Breadboard Electronics (Beginner)</li>
+                                <li class="flex items-center"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mr-4 font-bold shadow-inner">2</span> <strong>Level 2:</strong> Arduino Automation (Intermediate)</li>
+                                <li class="flex items-center"><span class="flex-shrink-0 w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center mr-4 font-bold shadow-inner">3</span> <strong>Level 3:</strong> Robotics (Advanced)</li>
+                            </ul>
+                            <p class="text-gray-600 text-sm md:text-base border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/50 rounded-r-lg">
+                                Each kit includes components, instructions, and access to 100+ real-time projects. Ideal for Grades 3 to 12, our kits are perfect for school projects, competitions, and personal innovation!
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us Section -->
-        <section id="why-choose-us" class="py-16 bg-gray-100">
+        <section id="why-choose-us" class="py-20 bg-[#F8FAFC]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Why Choose S.K Robotics?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 text-center items-stretch">
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-lightbulb text-5xl text-yellow-500 mb-4 animate-icon-pulse"></i>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Affordable, Quality Training</h3>
-                        <p class="text-gray-600 flex-grow">We provide top-notch hands-on learning at a cost that’s accessible to all students without compromising quality.</p>
+                <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-center text-gray-900 mb-16 animate-on-scroll">Why Choose S.K Robotics?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center items-stretch max-w-6xl mx-auto">
+                    
+                    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl why-choose-us-item animate-on-scroll h-full border border-gray-100">
+                        <div class="w-20 h-20 rounded-2xl bg-yellow-100 text-yellow-600 flex items-center justify-center mb-6 shadow-inner transform rotate-3 group-hover:rotate-6 transition-transform">
+                            <i class="fas fa-lightbulb text-4xl animate-icon-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 font-heading">Affordable, Quality Training</h3>
+                        <p class="text-gray-600 flex-grow leading-relaxed">Top-notch hands-on learning at a cost that’s accessible to all students without compromising quality.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-chalkboard-teacher text-5xl text-green-500 mb-4 animate-icon-pulse"></i>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hands-On Learning Without Expensive Kits</h3>
-                        <p class="text-gray-600 flex-grow">Unlike other programs, we don’t rely on costly product-based kits. Instead, we focus on building skills using open-source hardware and software, giving you the freedom to experiment and innovate.</p>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl why-choose-us-item animate-on-scroll h-full border border-gray-100">
+                        <div class="w-20 h-20 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center mb-6 shadow-inner transform -rotate-3 group-hover:-rotate-6 transition-transform">
+                            <i class="fas fa-tools text-4xl animate-icon-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 font-heading">Hands-On Learning</h3>
+                        <p class="text-gray-600 flex-grow leading-relaxed">We focus on building skills using open-source hardware and software, giving freedom to experiment and innovate.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-award text-5xl text-blue-500 mb-4 animate-icon-pulse"></i>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Open-Source Tools for Creativity</h3>
-                        <p class="text-gray-600 flex-grow">Our training uses open-source platforms, enabling you to explore, customize, and create without limitations or extra expenses.</p>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl why-choose-us-item animate-on-scroll h-full border border-gray-100">
+                        <div class="w-20 h-20 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 shadow-inner transform rotate-3 group-hover:rotate-6 transition-transform">
+                            <i class="fas fa-code-branch text-4xl animate-icon-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 font-heading">Open-Source Tools</h3>
+                        <p class="text-gray-600 flex-grow leading-relaxed">Our training uses open-source platforms, enabling you to explore, customize, and create without limitations.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-flask text-5xl text-purple-500 mb-4 animate-icon-pulse"></i>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Industry 5.0 Ready Skills</h3>
-                        <p class="text-gray-600 flex-grow">Our curriculum is designed to prepare you for the future, combining human creativity with cutting-edge technology.</p>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl why-choose-us-item animate-on-scroll h-full border border-gray-100">
+                        <div class="w-20 h-20 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 shadow-inner transform -rotate-3 group-hover:-rotate-6 transition-transform">
+                            <i class="fas fa-robot text-4xl animate-icon-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 font-heading">Industry 5.0 Ready</h3>
+                        <p class="text-gray-600 flex-grow leading-relaxed">Curriculum designed to prepare you for the future, combining human creativity with cutting-edge technology.</p>
                     </div>
-                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-user-friends text-5xl text-orange-500 mb-4 animate-icon-pulse"></i>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Mentorship</h3>
-                        <p class="text-gray-600 flex-grow">Whether you’re a school student or a career aspirant, our experienced mentors guide you every step of the way.</p>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl why-choose-us-item animate-on-scroll h-full border border-gray-100">
+                        <div class="w-20 h-20 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 shadow-inner transform rotate-3 group-hover:rotate-6 transition-transform">
+                            <i class="fas fa-users text-4xl animate-icon-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 font-heading">Personalized Mentorship</h3>
+                        <p class="text-gray-600 flex-grow leading-relaxed">Experienced mentors guide you every step of the way, whether you're a school student or a career aspirant.</p>
                     </div>
-                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl why-choose-us-item animate-on-scroll h-full">
-                        <i class="fas fa-project-diagram text-5xl text-teal-500 mb-4 animate-icon-pulse"></i>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-World Project Experience</h3>
-                        <p class="text-gray-600 flex-grow">Learn by building real projects that develop your problem-solving skills and boost your confidence.</p>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl why-choose-us-item animate-on-scroll h-full border border-gray-100">
+                        <div class="w-20 h-20 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center mb-6 shadow-inner transform -rotate-3 group-hover:-rotate-6 transition-transform">
+                            <i class="fas fa-project-diagram text-4xl animate-icon-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 font-heading">Real-World Projects</h3>
+                        <p class="text-gray-600 flex-grow leading-relaxed">Learn by building real projects that develop your problem-solving skills and boost your confidence.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects in Action Section -->
-        <section id="projects-in-action" class="py-16 bg-white">
+        <section id="projects-in-action" class="py-24 bg-white relative">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-12 animate-on-scroll">Our Projects in Action</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751557848/WhatsApp_Image_2025-07-03_at_9.19.35_PM_nnqflv.jpg" alt="Breadboard Electronics Kit" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Level 1: Breadboard Electronics (Beginner)</h3>
-                            <p class="text-gray-700 mb-4">
+                <div class="text-center mb-16">
+                    <span class="text-indigo-600 font-bold tracking-wider uppercase text-sm mb-2 block animate-on-scroll">Showcase</span>
+                    <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 animate-on-scroll">Our Projects in Action</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full animate-on-scroll"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <div class="group bg-white rounded-[2rem] shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll border border-gray-100">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751557848/WhatsApp_Image_2025-07-03_at_9.19.35_PM_nnqflv.jpg" alt="Breadboard Electronics Kit" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Level 1</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 font-heading group-hover:text-indigo-600 transition-colors">Breadboard Electronics</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
                                 This beginner-friendly kit includes components, instructions, and access to 100+ real-time projects. Perfect for Grades 3-12 to learn by doing!
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751727888/arudino_bgvbsp.jpg" alt="Arduino Automation Kit" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Level 2: Arduino Automation (Intermediate)</h3>
-                            <p class="text-gray-700 mb-4">
+                    
+                    <div class="group bg-white rounded-[2rem] shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll border border-gray-100">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751727888/arudino_bgvbsp.jpg" alt="Arduino Automation Kit" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Level 2</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 font-heading group-hover:text-purple-600 transition-colors">Arduino Automation</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
                                 An intermediate kit designed for creating automated systems. Includes components, instructions, and access to 100+ real-time projects for hands-on learning.
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751385939/r2_to2htn.jpg" alt="Robotics Kit" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Level 3: Robotics (Advanced)</h3>
-                            <p class="text-gray-700 mb-4">
-                                Our advanced robotics kit for designing, building, and programming various robots. Comes with components, instructions, and 100+ real-time projects for comprehensive learning.
+                    
+                    <div class="group bg-white rounded-[2rem] shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll border border-gray-100">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751385939/r2_to2htn.jpg" alt="Robotics Kit" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Level 3</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 font-heading group-hover:text-pink-600 transition-colors">Robotics (Advanced)</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+                                Our advanced robotics kit for designing, building, and programming various robots. Comes with components, instructions, and 100+ real-time projects.
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751728659/iot_bhnezo.png" alt="IoT" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">IoT Projects</h3>
-                            <p class="text-gray-700 mb-4">
-                                Developing smart devices and systems connected to the Internet of Things.
+                    
+                    <div class="group bg-white rounded-[2rem] shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll border border-gray-100">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751728659/iot_bhnezo.png" alt="IoT" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Special</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 font-heading group-hover:text-blue-600 transition-colors">IoT Projects</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+                                Developing smart devices and systems connected to the Internet of Things, creating interconnected ecosystems.
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl animate-on-scroll">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751728568/ai_drgx3m.jpg" alt="Artificial Intelligence" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-700 mb-2">Artificial Intelligence Projects</h3>
-                            <p class="text-gray-700 mb-4">
-                                Exploring AI concepts and building intelligent systems.
+                    
+                    <div class="group bg-white rounded-[2rem] shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll border border-gray-100">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751728568/ai_drgx3m.jpg" alt="Artificial Intelligence" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-teal-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Special</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 font-heading group-hover:text-teal-600 transition-colors">Artificial Intelligence</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+                                Exploring AI concepts and building intelligent systems that can learn, adapt, and perform complex tasks autonomously.
                             </p>
                         </div>
                     </div>
@@ -254,57 +374,212 @@
         </section>
 
         <!-- Founder Section -->
-        <section id="founder-section" class="py-16 bg-white">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12 animate-on-scroll">
-                <div class="md:w-1/3 flex justify-center">
-                    <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="Sabarinathan Dhandapani" class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-indigo-200 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+        <section id="founder-section" class="py-24 bg-gradient-to-br from-[#F8FAFC] to-[#F1F5F9] relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=')] opacity-50"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="bg-white rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 max-w-5xl mx-auto p-10 md:p-16 flex flex-col md:flex-row items-center gap-16 animate-on-scroll">
+                    <div class="md:w-2/5 flex justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full transform rotate-6 scale-105 opacity-20 filter blur-xl"></div>
+                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="Sabarinathan Dhandapani" class="rounded-full w-56 h-56 md:w-72 md:h-72 object-cover shadow-2xl border-8 border-white relative z-10 transform transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="md:w-3/5 text-center md:text-left relative">
+                        <i class="fas fa-quote-left text-6xl text-indigo-100 absolute -top-8 -left-4 z-0"></i>
+                        <h2 class="text-4xl font-heading font-extrabold text-gray-900 mb-6 relative z-10">A Word From Our Founder</h2>
+                        <blockquote class="text-xl text-gray-600 italic leading-relaxed relative z-10 font-light">
+                            "As an engineer and a parent, I started S.K Robotics to create the learning space I wished I had as a child. My mission is to empower every student with the confidence to not just use technology, but to create it."
+                        </blockquote>
+                        <div class="mt-8 relative z-10 flex items-center justify-center md:justify-start gap-4">
+                            <div class="w-12 h-1 bg-indigo-500 rounded-full"></div>
+                            <p class="text-lg font-bold text-gray-900">Sabarinathan Dhandapani</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="md:w-2/3 text-center md:text-left">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-indigo-700 mb-6">A Word From Our Founder</h2>
-                    <blockquote class="text-lg text-gray-700 italic leading-relaxed">
-                        "As an engineer and a parent, I started S.K Robotics to create the learning space I wished I had as a child. My mission is to empower every student with the confidence to not just use technology, but to create it."
-                    </blockquote>
-                    <p class="text-md font-semibold text-gray-600 mt-4">- Sabarinathan Dhandapani, Founder</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq-section" class="py-24 bg-gray-50 relative border-t border-gray-100">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-indigo-600 font-bold tracking-wider uppercase text-sm mb-2 block animate-on-scroll">Got Questions?</span>
+                    <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 animate-on-scroll">Frequently Asked Questions</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full animate-on-scroll"></div>
+                </div>
+                
+                <div class="space-y-4 animate-on-scroll">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-gray-900 text-lg">Who can join the S.K Robotics courses?</span>
+                            <i class="fas fa-plus text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-5 hidden text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
+                            Our courses are designed for students from Grade 3 to 12, as well as college students and anyone passionate about learning electronics, automation, and robotics from scratch.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-gray-900 text-lg">Do I need to buy expensive kits?</span>
+                            <i class="fas fa-plus text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-5 hidden text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
+                            Not at all! We focus on using open-source hardware. We provide affordable, standardized kits for our practical sessions so you can learn without breaking the bank.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-gray-900 text-lg">Are the classes online or offline?</span>
+                            <i class="fas fa-plus text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-5 hidden text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
+                            We offer primarily offline, hands-on classes at our center in Udumalpet to ensure you get the best practical experience. However, we do host online workshops occasionally.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-gray-900 text-lg">Will I receive a certificate?</span>
+                            <i class="fas fa-plus text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-5 hidden text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
+                            Yes! Every student who successfully completes a program or workshop receives a verified certificate of participation and achievement from S.K Robotics.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-24 bg-white relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-64 h-64 bg-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+            <div class="absolute left-0 bottom-0 w-64 h-64 bg-purple-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-indigo-600 font-bold tracking-wider uppercase text-sm mb-2 block animate-on-scroll">Testimonials</span>
+                    <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 animate-on-scroll">What Our Students Say</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full animate-on-scroll"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 relative animate-on-scroll transform transition duration-500 hover:-translate-y-2 group">
+                        <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-gray-100 group-hover:text-indigo-100 transition-colors"></i>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">R</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Rahul M.</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">"The hands-on approach at SK Robotics completely changed how I look at electronics. I built my first Arduino project here and it was an incredible experience!"</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 relative animate-on-scroll transform transition duration-500 hover:-translate-y-2 md:-translate-y-4 group">
+                        <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-gray-100 group-hover:text-purple-100 transition-colors"></i>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">S</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Sneha K.</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">"The mentors are highly knowledgeable and patient. The robotics kit provided is top quality. Highly recommend their weekend classes to anyone interested in tech."</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 relative animate-on-scroll transform transition duration-500 hover:-translate-y-2 group">
+                        <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-gray-100 group-hover:text-teal-100 transition-colors"></i>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">A</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Aditya P.</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">"From breadboard basics to AI projects, SK Robotics has a structured curriculum that makes learning complex concepts very easy. Truly the best place to learn."</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Summer Camp Modal - Bootstrap Component -->
+    <!-- Robotics & Coding Admission Modal - Bootstrap Component -->
     <div class="modal fade" id="anniversaryModal" tabindex="-1" aria-labelledby="anniversaryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content rounded-xl shadow-2xl border-none">
-                <div class="modal-header bg-gradient-to-r from-purple-600 to-indigo-700 text-white border-b-0 rounded-t-xl">
-                    <h5 class="modal-title font-extrabold text-2xl" id="anniversaryModalLabel">Summer Camp Announcement!</h5>
-                    <button type="button" class="btn-close text-white opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-8 text-center flex flex-col md:flex-row items-center gap-6">
-                    <div class="md:w-1/2 text-left">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">S.K ROBOT</h3>
-                        <h4 class="text-xl font-bold text-purple-600 mb-4">SUMMER CAMP<br>LEARN. BUILD. INNOVATE!</h4>
-                        <p class="text-gray-700 text-md mb-4 font-semibold">
-                            BREAD BOARD ELECTRONICS, SENSORS & AUTOMATION, ROBOTICS
-                        </p>
-                        <ul class="text-gray-700 text-sm mb-4 space-y-2">
-                            <li><strong><i class="far fa-calendar-alt text-indigo-500 mr-2"></i>DATE:</strong> 18.05.2026 to 26.05.2026</li>
-                            <li><strong><i class="far fa-clock text-indigo-500 mr-2"></i>TIMING:</strong> 10.00 am to 01.00 pm</li>
-                            <li><strong><i class="fas fa-rupee-sign text-indigo-500 mr-2"></i>FEES:</strong> 1500/-</li>
-                        </ul>
-                        <p class="text-indigo-600 font-bold mb-4">
-                            Join Now & Explore The World of ROBOTICS!
-                        </p>
+            <div class="modal-content rounded-2xl shadow-2xl border-none overflow-hidden">
+                <div class="modal-header bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white border-b-0 p-6">
+                    <div>
+                        <h5 class="modal-title font-extrabold text-2xl tracking-wide" id="anniversaryModalLabel">New Batch Announcement!</h5>
+                        <p class="text-indigo-100 text-sm mt-1 font-medium">Build | Code | Innovate</p>
                     </div>
-                    <div class="md:w-1/2">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1779030167/modal_ndszbn.jpg" 
-                             alt="SK Robotics Summer Camp" 
-                             class="mx-auto rounded-lg shadow-xl w-full object-cover border-4 border-indigo-100">
+                    <button type="button" class="btn-close btn-close-white text-white opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-8 flex flex-col md:flex-row items-stretch gap-8">
+                    <div class="md:w-1/2 flex flex-col justify-between text-left">
+                        <div>
+                            <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3">S.K ROBOTICS</span>
+                            <h4 class="text-2xl font-black text-gray-900 leading-tight mb-2">Robotics & Coding Course</h4>
+                            <p class="text-purple-600 font-bold text-sm uppercase tracking-wider mb-4">Learn Today, Lead Tomorrow</p>
+                            
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Empowering young minds (Ages 7+) to design, build, and program real-world robots using industry standard tools and sensors.
+                            </p>
+
+                            <!-- Batches Section -->
+                            <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100 mb-6">
+                                <h5 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center">
+                                    <i class="fas fa-calendar-alt text-indigo-500 mr-2"></i>Choose Your Batch
+                                </h5>
+                                <ul class="space-y-3 text-sm text-gray-700">
+                                    <li class="flex items-start justify-between gap-2 border-b border-gray-100 pb-2">
+                                        <div>
+                                            <span class="font-bold text-gray-900 block">Batch 1 (Weekday)</span>
+                                            <span class="text-xs text-gray-500">Monday to Friday</span>
+                                        </div>
+                                        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-md self-center">05:30 PM - 08:00 PM</span>
+                                    </li>
+                                    <li class="flex items-start justify-between gap-2 border-b border-gray-100 pb-2">
+                                        <div>
+                                            <span class="font-bold text-gray-900 block">Batch 2 (Weekend Evening)</span>
+                                            <span class="text-xs text-gray-500">Saturday</span>
+                                        </div>
+                                        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-md self-center">05:30 PM - 08:00 PM</span>
+                                    </li>
+                                    <li class="flex items-start justify-between gap-2">
+                                        <div>
+                                            <span class="font-bold text-gray-900 block">Batch 3 (Weekend Morning)</span>
+                                            <span class="text-xs text-gray-500">Sunday</span>
+                                        </div>
+                                        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-md self-center">10:00 AM - 12:30 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Address and contact info -->
+                        <div class="text-xs text-gray-500 border-t border-gray-100 pt-4 mt-auto">
+                            <p class="mb-1"><i class="fas fa-map-marker-alt text-pink-500 mr-1.5"></i>UKPM Square, Near Sun Hotel, Palani Road, Udumalpet</p>
+                            <p><i class="fas fa-phone-alt text-green-500 mr-1.5"></i>8883335701, 9688987156</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1779872311/IMG-20260525-WA0000_o4c8s6.jpg" 
+                             alt="SK Robotics & Coding Admission Announcement" 
+                             class="rounded-xl shadow-xl w-full object-cover border border-gray-100 transform hover:scale-[1.02] transition-transform duration-300">
                     </div>
                 </div>
-                <div class="modal-footer justify-center bg-gray-50 border-t-0 rounded-b-xl">
-                    <a href="registration.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                <div class="modal-footer justify-center bg-gray-50 border-t-0 p-6">
+                    <a href="registration.html" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 transform hover:scale-105 mr-3">
                         Register Now
                     </a>
-                    <button type="button" class="btn bg-gray-200 text-gray-700 font-semibold py-2 px-6 rounded-full transition duration-300 hover:bg-gray-300" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="bg-gray-200 text-gray-700 hover:bg-gray-300 font-semibold py-3 px-8 rounded-full transition duration-300" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -340,48 +615,68 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-10">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t-4 border-indigo-500 relative overflow-hidden">
+        <!-- background decorative elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-900/40 rounded-full filter blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-900/40 rounded-full filter blur-3xl -translate-x-1/3 translate-y-1/3"></div>
+        
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left relative z-10">
             <div>
-                <h3 class="text-xl font-bold text-indigo-300 mb-4">S.K Robotics</h3>
-                <p class="text-gray-400">Empowering the next generation of innovators through hands-on robotics education.</p>
+                <a href="index.html" class="inline-block mb-6">
+                    <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1751380937/WhatsApp_Image_2025-06-27_at_6.17.36_AM_uaimrs.jpg" alt="SK Robotics Logo" class="h-16 w-auto rounded-xl shadow-lg border border-gray-700">
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Empowering the next generation of innovators through hands-on robotics education and cutting-edge technology programs.</p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div>
-                <h3 class="text-xl font-bold text-indigo-300 mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Home</a></li>
-                    <li><a href="about.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">About Us</a></li>
-                    <li><a href="courses.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Courses</a></li>
-                    <li><a href="workshops.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Workshops</a></li>
-                    <li><a href="programs.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Programs</a></li>
-                    <li><a href="milestones.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Milestones</a></li>
-                    <li><a href="registration.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Register</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-indigo-300 transition duration-300">Contact Us</a></li>
+            <div class="md:pl-8">
+                <h3 class="text-xl font-heading font-bold text-white mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-gray-400 hover:text-indigo-400 transition duration-300 flex items-center justify-center md:justify-start"><i class="fas fa-chevron-right text-xs mr-2 text-indigo-500"></i> Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-indigo-400 transition duration-300 flex items-center justify-center md:justify-start"><i class="fas fa-chevron-right text-xs mr-2 text-indigo-500"></i> About Us</a></li>
+                    <li><a href="courses.html" class="text-gray-400 hover:text-indigo-400 transition duration-300 flex items-center justify-center md:justify-start"><i class="fas fa-chevron-right text-xs mr-2 text-indigo-500"></i> Courses</a></li>
+                    <li><a href="workshops.html" class="text-gray-400 hover:text-indigo-400 transition duration-300 flex items-center justify-center md:justify-start"><i class="fas fa-chevron-right text-xs mr-2 text-indigo-500"></i> Workshops</a></li>
+                    <li><a href="programs.html" class="text-gray-400 hover:text-indigo-400 transition duration-300 flex items-center justify-center md:justify-start"><i class="fas fa-chevron-right text-xs mr-2 text-indigo-500"></i> Programs</a></li>
+                    <li><a href="registration.html" class="text-gray-400 hover:text-indigo-400 transition duration-300 flex items-center justify-center md:justify-start"><i class="fas fa-chevron-right text-xs mr-2 text-indigo-500"></i> Register</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-xl font-bold text-indigo-300 mb-4">Contact Info</h3>
-                <p class="text-gray-400 mb-2">
-                    <i class="fas fa-phone mr-2"></i>
-                    <a href="tel:+919688987156" class="hover:underline">+91 9688987156</a>
-                </p>
-                <p class="text-gray-400 mb-2">
-                    <a href="https://wa.me/919688987156" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-600 transition duration-300">
-                        <i class="fab fa-whatsapp text-xl mr-2"></i> +91 9688987156
-                    </a>
-                </p>
-                <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i>skroboticsstem@gmail.com</p>
-                <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i>281 UKPM Square, NH83, Gandhi Nagar, Udumalpet</p>
-                <div class="flex justify-center md:justify-start space-x-4 mt-6">
-                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300" aria-label="Facebook"><i class="fab fa-facebook-f text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300" aria-label="Twitter"><i class="fab fa-twitter text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-300 transition duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <h3 class="text-xl font-heading font-bold text-white mb-6">Stay Updated</h3>
+                <p class="text-gray-400 text-sm mb-4">Subscribe to our newsletter for the latest tech updates and workshop schedules.</p>
+                <form class="flex flex-col sm:flex-row mb-6" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <input type="email" placeholder="Your email address" required class="bg-gray-800 text-white border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-l-lg sm:rounded-r-none px-4 py-2 outline-none flex-grow mb-2 sm:mb-0">
+                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-r-lg sm:rounded-l-none transition duration-300 w-full sm:w-auto" aria-label="Subscribe to newsletter">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <h3 class="text-lg font-heading font-bold text-white mb-4">Contact Us</h3>
+                <div class="space-y-3">
+                    <p class="text-gray-400 flex items-start justify-center md:justify-start group">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-indigo-500 group-hover:text-indigo-400 transition-colors"></i>
+                        <span>281 UKPM Square, NH83, Gandhi Nagar, Udumalpet</span>
+                    </p>
+                    <p class="text-gray-400 flex items-center justify-center md:justify-start group">
+                        <i class="fas fa-phone mr-3 text-indigo-500 group-hover:text-indigo-400 transition-colors"></i>
+                        <a href="tel:+919688987156" class="hover:text-white transition-colors">+91 9688987156</a>
+                    </p>
+                    <p class="text-gray-400 flex items-center justify-center md:justify-start group">
+                        <i class="fab fa-whatsapp text-xl mr-3 text-green-500 group-hover:text-green-400 transition-colors"></i>
+                        <a href="https://wa.me/919688987156" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">+91 9688987156</a>
+                    </p>
+                    <p class="text-gray-400 flex items-center justify-center md:justify-start group">
+                        <i class="fas fa-envelope mr-3 text-indigo-500 group-hover:text-indigo-400 transition-colors"></i>
+                        <a href="mailto:skroboticsstem@gmail.com" class="hover:text-white transition-colors">skroboticsstem@gmail.com</a>
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="text-center text-gray-500 text-sm mt-10">
-            &copy; 2025 SK Robotics. All rights reserved.
+        <div class="container mx-auto px-4 relative z-10 mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 S.K Robotics. All rights reserved.</p>
+            <p class="mt-2 md:mt-0">Designed with <i class="fas fa-heart text-red-500 mx-1"></i> for future innovators</p>
         </div>
     </footer>
     

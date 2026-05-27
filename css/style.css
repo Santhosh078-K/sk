@@ -1,8 +1,42 @@
 /* Custom CSS for SK Robotics Website */
 
-/* Ensure smooth scrolling for anchor links (still useful for internal page anchors like on homepage) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 html {
     scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f8fafc; 
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #818cf8, #c084fc); 
+    border-radius: 10px;
+    border: 2px solid #f8fafc;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #6366f1, #a855f7); 
+}
+
+/* Custom Selection */
+::selection {
+    background-color: rgba(99, 102, 241, 0.9);
+    color: white;
 }
 
 /* Base styles for page sections */
@@ -45,18 +79,38 @@ html {
 
 /* --- Global Fade-in-Up Animation for elements on scroll --- */
 .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Blobs Animation */
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
 }
 
 /* Initial state for elements before they scroll into view */
