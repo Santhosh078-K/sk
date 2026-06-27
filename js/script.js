@@ -764,58 +764,59 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
 
     // 4. Typing Effect for Hero Section
-    const typedTextSpan = document.getElementById('typed-text');
-    if (typedTextSpan) {
-        const textArray = ["Welcome to <br> <span class='bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>S.K Robotics</span>", "Learn. Build. Innovate.", "Design Your Future."];
-        const typingDelay = 50;
-        const erasingDelay = 30;
-        const newTextDelay = 2000;
-        let textArrayIndex = 0;
-        let charIndex = 0;
+   const typedTextSpan = document.getElementById("typed-text");
 
-        function type() {
-            if (charIndex < textArray[textArrayIndex].length) {
-                let char = textArray[textArrayIndex].charAt(charIndex);
-                if (char === '<') {
-                    const closingIndex = textArray[textArrayIndex].indexOf('>', charIndex);
-                    if (closingIndex !== -1) {
-                        const tag = textArray[textArrayIndex].substring(charIndex, closingIndex + 1);
-                        typedTextSpan.innerHTML += tag;
-                        charIndex = closingIndex + 1;
-                    }
-                } else {
-                    typedTextSpan.innerHTML += char;
-                    charIndex++;
-                }
-                setTimeout(type, typingDelay);
-            } else {
-                setTimeout(erase, newTextDelay);
-            }
-        }
+if (typedTextSpan) {
+    const textArray = [
+        "Welcome to <br><span class='bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>S.K Robotics</span>",
+        "Learn. Build. Innovate.",
+        "Design Your Future."
+    ];
 
-        function erase() {
-            if (charIndex > 0) {
-                let currentHTML = typedTextSpan.innerHTML;
-                if (currentHTML.endsWith('>')) {
-                    const openingIndex = currentHTML.lastIndexOf('<');
-                    if (openingIndex !== -1) {
-                        typedTextSpan.innerHTML = currentHTML.substring(0, openingIndex);
-                        charIndex -= (currentHTML.length - openingIndex);
-                    }
-                } else {
-                    typedTextSpan.innerHTML = currentHTML.substring(0, currentHTML.length - 1);
-                    charIndex--;
-                }
-                setTimeout(erase, erasingDelay);
-            } else {
-                textArrayIndex++;
-                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-                setTimeout(type, typingDelay + 500);
-            }
-        }
+    const typingDelay = 50;
+    const erasingDelay = 30;
+    const newTextDelay = 2000;
 
-        setTimeout(type, newTextDelay);
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    let currentText = "";
+
+    function stripHTML(html) {
+        const div = document.createElement("div");
+        div.innerHTML = html;
+        return div.textContent || div.innerText || "";
     }
+
+    function type() {
+        const plainText = stripHTML(textArray[textArrayIndex]);
+
+        if (charIndex < plainText.length) {
+            typedTextSpan.textContent += plainText.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+        } else {
+            // Replace plain text with formatted HTML
+            typedTextSpan.innerHTML = textArray[textArrayIndex];
+            setTimeout(erase, newTextDelay);
+        }
+    }
+
+    function erase() {
+        const plainText = stripHTML(textArray[textArrayIndex]);
+
+        if (charIndex > 0) {
+            typedTextSpan.textContent = plainText.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+        } else {
+            textArrayIndex = (textArrayIndex + 1) % textArray.length;
+            typedTextSpan.textContent = "";
+            setTimeout(type, typingDelay);
+        }
+    }
+
+    setTimeout(type, 500);
+}
 
     // 5. FAQ Accordion Logic
     const faqToggles = document.querySelectorAll('.faq-toggle');
