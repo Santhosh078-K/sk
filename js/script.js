@@ -78,13 +78,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- Automatic Anniversary Modal on Page Load ---
-    // This is the new logic to display the modal automatically.
-    // It will only run on the homepage (index.html)
-    if (document.getElementById('anniversaryModal')) {
+    // --- Configurable Event / Modal Object ---
+    // Single configurable object for easy updates
+    const EVENT_MODAL_CONFIG = {
+        title: "Science Expo 2026",
+        partner: "Sri Varshini TVS and S.K Robotics",
+        imageUrl: "https://res.cloudinary.com/dujxs5154/image/upload/v1791304740/Expo_pbbxix.jpg",
+        altText: "Science Expo 2026 - Sri Varshini TVS and S.K Robotics"
+    };
+
+    // --- Automatic Science Expo Modal on Page Load ---
+    const anniversaryModalEl = document.getElementById('anniversaryModal');
+    if (anniversaryModalEl) {
+        const posterImg = document.getElementById('modal-poster-img');
+        const posterContainer = document.getElementById('modal-poster-container');
+
+        if (posterImg && EVENT_MODAL_CONFIG.imageUrl) {
+            posterImg.src = EVENT_MODAL_CONFIG.imageUrl;
+            posterImg.alt = EVENT_MODAL_CONFIG.altText;
+
+            // Graceful fallback if Cloudinary temporarily fails
+            posterImg.addEventListener('error', function () {
+                console.warn('Cloudinary modal image failed to load. Rendering graceful fallback.');
+                this.classList.add('hidden');
+                if (posterContainer && !document.getElementById('modal-poster-fallback')) {
+                    const fallbackBox = document.createElement('div');
+                    fallbackBox.id = 'modal-poster-fallback';
+                    fallbackBox.className = 'w-full h-full min-h-[320px] flex flex-col items-center justify-center p-6 text-center bg-indigo-50/90 border-2 border-dashed border-indigo-200 rounded-xl';
+                    fallbackBox.innerHTML = `
+                        <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-2xl mb-3 shadow-inner">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h5 class="text-lg font-bold text-gray-900 mb-1">${EVENT_MODAL_CONFIG.title}</h5>
+                        <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-2">${EVENT_MODAL_CONFIG.partner}</p>
+                        <p class="text-xs text-gray-600 leading-relaxed max-w-xs mb-4">Poster preview is temporarily unavailable. Check the event details to participate!</p>
+                        <a href="${EVENT_MODAL_CONFIG.imageUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-700 hover:text-indigo-900 font-semibold underline inline-flex items-center gap-1">
+                            <span>Open poster directly</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </a>
+                    `;
+                    posterContainer.appendChild(fallbackBox);
+                }
+            });
+        }
+
         // Use a small timeout to ensure Bootstrap's JS has fully loaded.
         setTimeout(() => {
-            const myModal = new bootstrap.Modal(document.getElementById('anniversaryModal'));
+            const myModal = new bootstrap.Modal(anniversaryModalEl);
             myModal.show();
         }, 500); // 500ms delay should be sufficient.
     }

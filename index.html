@@ -510,55 +510,66 @@
         </section>
     </main>
 
-    <!-- Robotics & Coding Admission Modal - Bootstrap Component -->
+    <!-- Science Expo 2026 Modal - Bootstrap Component -->
     <div class="modal fade" id="anniversaryModal" tabindex="-1" aria-labelledby="anniversaryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-2xl shadow-2xl border-none overflow-hidden">
                 <div class="modal-header bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white border-b-0 p-6">
                     <div>
-                        <h5 class="modal-title font-extrabold text-2xl tracking-wide" id="anniversaryModalLabel">🎉 Celebrating Our 2nd Anniversary</h5>
-                        <p class="text-indigo-100 text-sm mt-1 font-medium">2 Years of Innovation</p>
+                        <h5 class="modal-title font-extrabold text-2xl tracking-wide" id="anniversaryModalLabel">🚀 Science Expo 2026</h5>
+                        <p class="text-indigo-100 text-sm mt-1 font-medium">Sri Varshini TVS &amp; S.K Robotics</p>
                     </div>
                     <button type="button" class="btn-close btn-close-white text-white opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-8 flex flex-col md:flex-row items-stretch gap-8">
-                    <div class="md:w-1/2 flex flex-col justify-between text-left">
+                <div class="modal-body p-6 md:p-8 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-8">
+                    <!-- Poster Container: Left on Desktop, Top on Mobile -->
+                    <div class="w-full md:w-1/2 flex items-center justify-center bg-gray-50/80 rounded-2xl p-2 border border-gray-100" id="modal-poster-container">
+                        <img id="modal-poster-img"
+                             src="https://res.cloudinary.com/dujxs5154/image/upload/v1791304740/Expo_pbbxix.jpg" 
+                             alt="Science Expo 2026 - Sri Varshini TVS and S.K Robotics" 
+                             loading="lazy"
+                             class="rounded-xl shadow-lg w-full max-h-[500px] object-contain border border-gray-100 transform hover:scale-[1.02] transition-transform duration-300"
+                             style="object-fit: contain;">
+                    </div>
+
+                    <!-- Event Information & Description: Below on Mobile, Right on Desktop -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-between text-left">
                         <div>
-                            <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3">S.K ROBOTICS</span>
-                            <h4 class="text-2xl font-black text-gray-900 leading-tight mb-2">Celebrating Our 2nd Anniversary</h4>
-                            <p class="text-purple-600 font-bold text-sm uppercase tracking-wider mb-4">Thank you for your trust and support!</p>
+                            <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3">SCIENCE EXPO 2026</span>
+                            <h4 class="text-2xl font-black text-gray-900 leading-tight mb-2">Sri Varshini TVS &amp; S.K Robotics</h4>
+                            <p class="text-purple-600 font-bold text-sm uppercase tracking-wider mb-4">Innovation &amp; Technology Exhibition</p>
                             
                             <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                                Thank you to all our students, parents and well-wishers for your trust and support.<br><br>
-<strong>Here's to many more years of building the future together!</strong>
+                                Join us for an inspiring Science Expo 2026 featuring innovative student robotics projects, automated systems, and science models presented jointly by Sri Varshini TVS and S.K Robotics.<br><br>
+                                <strong>Explore the future of robotics and technology crafted by young innovators!</strong>
                             </p>
 
-                            <!-- Batches Section -->
+                            <!-- Highlights Section -->
                             <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100 mb-6">
                                 <h5 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center">
-                                    <i class="fas fa-calendar-alt text-indigo-500 mr-2"></i>Choose Your Batch
+                                    <i class="fas fa-microchip text-indigo-500 mr-2"></i>Event Highlights
                                 </h5>
                                 <ul class="space-y-3 text-sm text-gray-700">
-                                    <li class="flex items-start justify-between gap-2 border-b border-gray-100 pb-2">
+                                    <li class="flex items-start gap-2 border-b border-gray-100 pb-2">
+                                        <i class="fas fa-robot text-indigo-600 mt-1"></i>
                                         <div>
-                                            <span class="font-bold text-gray-900 block">Batch 1 (Weekday)</span>
-                                            <span class="text-xs text-gray-500">Monday to Friday</span>
+                                            <span class="font-bold text-gray-900 block">Robotics &amp; AI Project Demos</span>
+                                            <span class="text-xs text-gray-500">Live working prototypes and automation</span>
                                         </div>
-                                        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-md self-center">05:30 PM - 08:00 PM</span>
                                     </li>
-                                    <li class="flex items-start justify-between gap-2 border-b border-gray-100 pb-2">
+                                    <li class="flex items-start gap-2 border-b border-gray-100 pb-2">
+                                        <i class="fas fa-atom text-purple-600 mt-1"></i>
                                         <div>
-                                            <span class="font-bold text-gray-900 block">Batch 2 (Weekend Evening)</span>
-                                            <span class="text-xs text-gray-500">Saturday</span>
+                                            <span class="font-bold text-gray-900 block">Science &amp; STEM Innovations</span>
+                                            <span class="text-xs text-gray-500">Interactive student project displays</span>
                                         </div>
-                                        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-md self-center">05:30 PM - 08:00 PM</span>
                                     </li>
-                                    <li class="flex items-start justify-between gap-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-handshake text-pink-600 mt-1"></i>
                                         <div>
-                                            <span class="font-bold text-gray-900 block">Batch 3 (Weekend Morning)</span>
-                                            <span class="text-xs text-gray-500">Sunday</span>
+                                            <span class="font-bold text-gray-900 block">Joint Innovation Showcase</span>
+                                            <span class="text-xs text-gray-500">Sri Varshini TVS and S.K Robotics collaboration</span>
                                         </div>
-                                        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-md self-center">10:00 AM - 12:30 PM</span>
                                     </li>
                                 </ul>
                             </div>
@@ -570,15 +581,10 @@
                             <p><i class="fas fa-phone-alt text-green-500 mr-1.5"></i>8883335701, 9688987156</p>
                         </div>
                     </div>
-                    <div class="md:w-1/2 flex items-center justify-center">
-                        <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1785775005/IMG-20260803-WA0002_x5ygzp.jpg" 
-                             alt="SK Robotics & Coding Admission Announcement" 
-                             class="rounded-xl shadow-xl w-full object-cover border border-gray-100 transform hover:scale-[1.02] transition-transform duration-300">
-                    </div>
                 </div>
                 <div class="modal-footer justify-center bg-gray-50 border-t-0 p-6">
                     <a href="registration.html" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 transform hover:scale-105 mr-3">
-                        Celebrate With Us
+                        Register / Join Us
                     </a>
                     <button type="button" class="bg-gray-200 text-gray-700 hover:bg-gray-300 font-semibold py-3 px-8 rounded-full transition duration-300" data-bs-dismiss="modal">Close</button>
                 </div>
