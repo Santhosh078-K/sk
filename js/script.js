@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get the mobile menu elements
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    
+
     // Proper Mobile Menu Toggle Logic
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             myModal.show();
         }, 500); // 500ms delay should be sufficient.
     }
-    
+
     // --- Animation and Interaction Enhancements ---
 
     // Function to add a class for fade-in effect on scroll
@@ -715,9 +715,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (achievementsDisplay) { // Renamed from achievementsDisplay to milestonesDisplay for clarity, but keeping original ID for now
         renderMilestones();
     }
-    
+
     // --- Premium Features: Scroll Progress & Back to Top ---
-    
+
     // 1. Inject Scroll Progress Bar
     const progressBarContainer = document.createElement('div');
     progressBarContainer.style.position = 'fixed';
@@ -727,23 +727,23 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBarContainer.style.height = '4px';
     progressBarContainer.style.zIndex = '9999';
     progressBarContainer.style.background = 'transparent';
-    
+
     const progressBar = document.createElement('div');
     progressBar.style.height = '100%';
     progressBar.style.width = '0%';
     progressBar.style.background = 'linear-gradient(to right, #818cf8, #c084fc)'; // indigo-400 to purple-400
     progressBar.style.transition = 'width 0.1s ease';
-    
+
     progressBarContainer.appendChild(progressBar);
     document.body.appendChild(progressBarContainer);
-    
+
     // 2. Inject Scroll to Top Button
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     scrollTopBtn.className = 'fixed bottom-24 right-6 bg-purple-600 text-white w-12 h-12 rounded-full shadow-xl hover:bg-purple-700 hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center opacity-0 pointer-events-none translate-y-10';
     scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
     document.body.appendChild(scrollTopBtn);
-    
+
     // Scroll Event Listener
     window.addEventListener('scroll', () => {
         // Progress Bar Logic
@@ -751,7 +751,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (windowScroll / height) * 100;
         progressBar.style.width = scrolled + '%';
-        
+
         // Scroll to Top Logic
         if (windowScroll > 300) {
             scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
         }
     });
-    
+
     // Scroll to Top Click
     scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({
@@ -781,7 +781,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const duration = 2000; // 2 seconds
                     const increment = finalValue / (duration / 16); // roughly 60fps
                     let currentValue = 0;
-                    
+
                     const updateCounter = () => {
                         currentValue += increment;
                         if (currentValue < finalValue) {
@@ -796,66 +796,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, { threshold: 0.5 });
-        
+
         counters.forEach(counter => observer.observe(counter));
     };
-    
+
     animateCounters();
 
     // 4. Typing Effect for Hero Section
-   const typedTextSpan = document.getElementById("typed-text");
+    const typedTextSpan = document.getElementById("typed-text");
 
-if (typedTextSpan) {
-    const textArray = [
-        "Welcome to <br><span class='bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>S.K Robotics</span>",
-        "Learn. Build. Innovate.",
-        "Design Your Future."
-    ];
+    if (typedTextSpan) {
+        const textArray = [
+            "Welcome to <br><span class='bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>S.K Robotics</span>",
+            "Learn. Build. Innovate.",
+            "Design Your Future."
+        ];
 
-    const typingDelay = 50;
-    const erasingDelay = 30;
-    const newTextDelay = 2000;
+        const typingDelay = 50;
+        const erasingDelay = 30;
+        const newTextDelay = 2000;
 
-    let textArrayIndex = 0;
-    let charIndex = 0;
-    let currentText = "";
+        let textArrayIndex = 0;
+        let charIndex = 0;
+        let currentText = "";
 
-    function stripHTML(html) {
-        const div = document.createElement("div");
-        div.innerHTML = html;
-        return div.textContent || div.innerText || "";
-    }
-
-    function type() {
-        const plainText = stripHTML(textArray[textArrayIndex]);
-
-        if (charIndex < plainText.length) {
-            typedTextSpan.textContent += plainText.charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-        } else {
-            // Replace plain text with formatted HTML
-            typedTextSpan.innerHTML = textArray[textArrayIndex];
-            setTimeout(erase, newTextDelay);
+        function stripHTML(html) {
+            const div = document.createElement("div");
+            div.innerHTML = html;
+            return div.textContent || div.innerText || "";
         }
-    }
 
-    function erase() {
-        const plainText = stripHTML(textArray[textArrayIndex]);
+        function type() {
+            const plainText = stripHTML(textArray[textArrayIndex]);
 
-        if (charIndex > 0) {
-            typedTextSpan.textContent = plainText.substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-        } else {
-            textArrayIndex = (textArrayIndex + 1) % textArray.length;
-            typedTextSpan.textContent = "";
-            setTimeout(type, typingDelay);
+            if (charIndex < plainText.length) {
+                typedTextSpan.textContent += plainText.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                // Replace plain text with formatted HTML
+                typedTextSpan.innerHTML = textArray[textArrayIndex];
+                setTimeout(erase, newTextDelay);
+            }
         }
-    }
 
-    setTimeout(type, 500);
-}
+        function erase() {
+            const plainText = stripHTML(textArray[textArrayIndex]);
+
+            if (charIndex > 0) {
+                typedTextSpan.textContent = plainText.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } else {
+                textArrayIndex = (textArrayIndex + 1) % textArray.length;
+                typedTextSpan.textContent = "";
+                setTimeout(type, typingDelay);
+            }
+        }
+
+        setTimeout(type, 500);
+    }
 
     // 5. FAQ Accordion Logic
     const faqToggles = document.querySelectorAll('.faq-toggle');
@@ -863,7 +863,7 @@ if (typedTextSpan) {
         toggle.addEventListener('click', () => {
             const content = toggle.nextElementSibling;
             const icon = toggle.querySelector('i');
-            
+
             content.classList.toggle('hidden');
             if (content.classList.contains('hidden')) {
                 icon.classList.remove('fa-minus', 'rotate-180');
