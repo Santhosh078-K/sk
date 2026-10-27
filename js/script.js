@@ -78,42 +78,126 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- Configurable Event / Modal Object ---
-    // Single configurable object for easy updates
-    const EVENT_MODAL_CONFIG = {
-        title: "Science Expo 2026",
-        partner: "Sri Varshini TVS and S.K Robotics",
-        imageUrl: "https://res.cloudinary.com/dujxs5154/image/upload/v1791304740/Expo_pbbxix.jpg",
-        altText: "Science Expo 2026 - Sri Varshini TVS and S.K Robotics"
+    // --- Science Expo 2026 Modal Configuration (Pure Vanilla JavaScript) ---
+    const SCIENCE_EXPO_CONFIG = {
+        title: "Science Expo 2026 – Dream • Discover • Create!",
+        shortTitle: "Science Expo 2026",
+        organizer: "S.K Robotics, Udumalpet",
+        partners: "JSR Educational Institutions, Galileo Science Club & Sri Aandal Educational Trust",
+        date: "21 November 2026 (Saturday)",
+        venue: "JSR Educational Institutions, Madathukulam",
+        fee: "₹100 per batch",
+        contacts: ["8883335701", "8531914920"],
+        registrationUrl: "registration.html?event=science-expo-2026",
+        whatsappUrl: "https://wa.me/918883335701?text=Hi%2C%20I%20want%20to%20register%20for%20Science%20Expo%202026%20at%20JSR%20Institutions.",
+        primaryImageUrl: "https://res.cloudinary.com/dujxs5154/image/upload/v1793118321/Image-27Oct26_kxix98.jpg",
+        localFallbackImageUrl: "Images/science_expo_2026.jpg",
+        altText: "Science Expo 2026 Poster – Dream, Discover & Create – S.K Robotics & JSR Educational Institutions"
     };
 
-    // --- Automatic Science Expo Modal on Page Load ---
-    const anniversaryModalEl = document.getElementById('anniversaryModal');
-    if (anniversaryModalEl) {
-        const posterImg = document.getElementById('modal-poster-img');
-        const posterContainer = document.getElementById('modal-poster-container');
+    // --- Science Expo 2026 Modal Controller ---
+    const expoModal = document.getElementById('scienceExpoModal');
+    const expoLightbox = document.getElementById('expoPosterLightbox');
+    let previousActiveElement = null;
 
-        if (posterImg && EVENT_MODAL_CONFIG.imageUrl) {
-            posterImg.src = EVENT_MODAL_CONFIG.imageUrl;
-            posterImg.alt = EVENT_MODAL_CONFIG.altText;
+    function openScienceExpoModal() {
+        if (!expoModal) return;
+        // Prevent duplicate opening if already active
+        if (expoModal.classList.contains('active')) return;
 
-            // Graceful fallback if Cloudinary temporarily fails
+        previousActiveElement = document.activeElement;
+        expoModal.classList.remove('hidden');
+        // Force reflow so CSS transition works smoothly
+        void expoModal.offsetWidth;
+        expoModal.classList.add('active');
+        expoModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('expo-modal-open');
+
+        // Focus close button for keyboard accessibility
+        const closeBtn = expoModal.querySelector('.expo-modal-close-trigger');
+        if (closeBtn) {
+            closeBtn.focus();
+        }
+    }
+
+    function closeScienceExpoModal() {
+        if (!expoModal || !expoModal.classList.contains('active')) return;
+
+        expoModal.classList.remove('active');
+        expoModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('expo-modal-open');
+
+        setTimeout(() => {
+            if (!expoModal.classList.contains('active')) {
+                expoModal.classList.add('hidden');
+            }
+        }, 300);
+
+        // Restore focus to previously active element or reopen button
+        if (previousActiveElement && typeof previousActiveElement.focus === 'function') {
+            previousActiveElement.focus();
+        }
+    }
+
+    function openPosterLightbox() {
+        if (!expoLightbox) return;
+        expoLightbox.classList.remove('hidden');
+        void expoLightbox.offsetWidth;
+        expoLightbox.classList.add('active');
+        expoLightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function closePosterLightbox() {
+        if (!expoLightbox) return;
+        expoLightbox.classList.remove('active');
+        expoLightbox.setAttribute('aria-hidden', 'true');
+        setTimeout(() => {
+            if (!expoLightbox.classList.contains('active')) {
+                expoLightbox.classList.add('hidden');
+            }
+        }, 250);
+    }
+
+    // Expose helpers globally for testing or external triggers
+    window.openScienceExpoModal = openScienceExpoModal;
+    window.closeScienceExpoModal = closeScienceExpoModal;
+    window.openPosterLightbox = openPosterLightbox;
+    window.closePosterLightbox = closePosterLightbox;
+
+    if (expoModal) {
+        // Handle poster image loading and resilient fallbacks
+        const posterImg = document.getElementById('expo-poster-img');
+        const posterContainer = document.getElementById('expo-poster-container');
+        let triedLocalFallback = false;
+
+        if (posterImg && SCIENCE_EXPO_CONFIG.primaryImageUrl) {
+            posterImg.src = SCIENCE_EXPO_CONFIG.primaryImageUrl;
+            posterImg.alt = SCIENCE_EXPO_CONFIG.altText;
+
             posterImg.addEventListener('error', function () {
-                console.warn('Cloudinary modal image failed to load. Rendering graceful fallback.');
+                if (!triedLocalFallback && SCIENCE_EXPO_CONFIG.localFallbackImageUrl) {
+                    console.warn('Primary Cloudinary poster failed. Falling back to local copy.');
+                    triedLocalFallback = true;
+                    this.src = SCIENCE_EXPO_CONFIG.localFallbackImageUrl;
+                    return;
+                }
+
+                console.warn('Both poster image sources failed. Rendering graceful fallback UI.');
                 this.classList.add('hidden');
-                if (posterContainer && !document.getElementById('modal-poster-fallback')) {
+                if (posterContainer && !document.getElementById('expo-poster-fallback')) {
                     const fallbackBox = document.createElement('div');
-                    fallbackBox.id = 'modal-poster-fallback';
-                    fallbackBox.className = 'w-full h-full min-h-[320px] flex flex-col items-center justify-center p-6 text-center bg-indigo-50/90 border-2 border-dashed border-indigo-200 rounded-xl';
+                    fallbackBox.id = 'expo-poster-fallback';
+                    fallbackBox.className = 'w-full h-full min-h-[340px] flex flex-col items-center justify-center p-6 text-center bg-indigo-50/90 border-2 border-dashed border-indigo-300 rounded-2xl';
                     fallbackBox.innerHTML = `
-                        <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-2xl mb-3 shadow-inner">
+                        <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-3xl mb-4 shadow-inner">
                             <i class="fas fa-atom"></i>
                         </div>
-                        <h5 class="text-lg font-bold text-gray-900 mb-1">${EVENT_MODAL_CONFIG.title}</h5>
-                        <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-2">${EVENT_MODAL_CONFIG.partner}</p>
-                        <p class="text-xs text-gray-600 leading-relaxed max-w-xs mb-4">Poster preview is temporarily unavailable. Check the event details to participate!</p>
-                        <a href="${EVENT_MODAL_CONFIG.imageUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-700 hover:text-indigo-900 font-semibold underline inline-flex items-center gap-1">
-                            <span>Open poster directly</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full mb-2">Science Expo 2026</span>
+                        <h4 class="text-xl font-black text-gray-900 mb-1">${SCIENCE_EXPO_CONFIG.title}</h4>
+                        <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-3">${SCIENCE_EXPO_CONFIG.organizer}</p>
+                        <p class="text-xs text-gray-600 leading-relaxed max-w-xs mb-4">Poster preview is temporarily unavailable. Scan the QR code or register online below!</p>
+                        <a href="${SCIENCE_EXPO_CONFIG.primaryImageUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-700 hover:text-indigo-900 font-bold underline inline-flex items-center gap-1.5">
+                            <span>View original poster</span> <i class="fas fa-external-link-alt text-[10px]"></i>
                         </a>
                     `;
                     posterContainer.appendChild(fallbackBox);
@@ -121,11 +205,63 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Use a small timeout to ensure Bootstrap's JS has fully loaded.
+        // Close button click listeners (all elements with .expo-modal-close-trigger)
+        const closeTriggers = document.querySelectorAll('.expo-modal-close-trigger');
+        closeTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeScienceExpoModal();
+            });
+        });
+
+        // Close on backdrop click (clicking outer overlay outside the card)
+        expoModal.addEventListener('click', (e) => {
+            if (e.target === expoModal) {
+                closeScienceExpoModal();
+            }
+        });
+
+        // Reopen button click listener
+        const reopenTriggers = document.querySelectorAll('.expo-modal-open-trigger');
+        reopenTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openScienceExpoModal();
+            });
+        });
+
+        // Keyboard navigation: Escape key to close modal or lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                if (expoLightbox && expoLightbox.classList.contains('active')) {
+                    closePosterLightbox();
+                } else if (expoModal && expoModal.classList.contains('active')) {
+                    closeScienceExpoModal();
+                }
+            }
+        });
+
+        // Auto-open modal after smooth entrance delay on page load
         setTimeout(() => {
-            const myModal = new bootstrap.Modal(anniversaryModalEl);
-            myModal.show();
-        }, 500); // 500ms delay should be sufficient.
+            openScienceExpoModal();
+        }, 600);
+    }
+
+    // Lightbox listeners
+    if (expoLightbox) {
+        const lightboxCloseTriggers = document.querySelectorAll('.expo-lightbox-close-trigger');
+        lightboxCloseTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                closePosterLightbox();
+            });
+        });
+
+        expoLightbox.addEventListener('click', (e) => {
+            if (e.target === expoLightbox) {
+                closePosterLightbox();
+            }
+        });
     }
 
     // --- Animation and Interaction Enhancements ---

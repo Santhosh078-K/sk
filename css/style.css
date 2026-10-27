@@ -268,3 +268,97 @@ body {
 .map-container iframe {
     border: 0;
 }
+
+/* ==========================================================================
+   Science Expo 2026 Promotional Modal Styles (Vanilla CSS)
+   ========================================================================== */
+
+/* Prevent page scrolling when modal is active */
+body.expo-modal-open {
+    overflow: hidden !important;
+}
+
+/* Modal Overlay Backdrop */
+#scienceExpoModal {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#scienceExpoModal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Modal Dialog Card Animation */
+#scienceExpoModal .sci-expo-card {
+    transform: scale(0.94) translateY(24px);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#scienceExpoModal.active .sci-expo-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Custom Scrollbar for Modal Body */
+.sci-expo-custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+.sci-expo-custom-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 9999px;
+}
+.sci-expo-custom-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+.sci-expo-custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Glowing Pulsing Reopen Button (Bottom-Left) */
+.sci-expo-reopen-btn {
+    animation: sci-expo-pulse 3s infinite ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sci-expo-reopen-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+
+@keyframes sci-expo-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5), 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(79, 70, 229, 0), 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    }
+}
+
+/* Lightbox Modal for Full Poster / QR Code */
+#expoPosterLightbox {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+#expoPosterLightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#expoPosterLightbox.active .sci-expo-lightbox-img {
+    transform: scale(1);
+}
+
+.sci-expo-lightbox-img {
+    transform: scale(0.95);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+

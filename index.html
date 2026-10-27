@@ -24,9 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Marked.js for Markdown rendering in LLM outputs -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- Bootstrap CSS for Modal -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -758,106 +755,295 @@
         </section>
     </main>
 
-    <!-- Science Expo 2026 Modal - Bootstrap Component -->
-    <div class="modal fade" id="anniversaryModal" tabindex="-1" aria-labelledby="anniversaryModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content rounded-2xl shadow-2xl border-none overflow-hidden">
-                <div
-                    class="modal-header bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white border-b-0 p-6">
-                    <div>
-                        <h5 class="modal-title font-extrabold text-2xl tracking-wide" id="anniversaryModalLabel">🚀
-                            Science Expo 2026</h5>
-                        <p class="text-indigo-100 text-sm mt-1 font-medium">Sri Varshini TVS &amp; S.K Robotics</p>
+    <!-- ==========================================================================
+         Science Expo 2026 Promotional Modal (Vanilla HTML5 / CSS3 / Vanilla JS)
+         ========================================================================== -->
+    <div id="scienceExpoModal"
+        class="fixed inset-0 z-[120] flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto backdrop-blur-md bg-slate-950/80 transition-all duration-300 hidden"
+        role="dialog" aria-modal="true" aria-labelledby="expo-modal-title" aria-describedby="expo-modal-desc">
+        
+        <div class="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl border border-indigo-100 overflow-hidden flex flex-col my-auto max-h-[92vh] sci-expo-card">
+            
+            <!-- Modal Header (Sci-Tech Space Gradient) -->
+            <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-purple-900 text-white p-5 sm:p-6 border-b border-indigo-800/40 flex justify-between items-start relative overflow-hidden">
+                <!-- Tech background decorative glow -->
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-purple-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="relative z-10 pr-4">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 uppercase tracking-widest mb-2 shadow-sm">
+                        <i class="fas fa-atom text-cyan-400"></i> Innovation &amp; Technology Exhibition
                     </div>
-                    <button type="button" class="btn-close btn-close-white text-white opacity-100"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 id="expo-modal-title" class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white flex flex-wrap items-center gap-2">
+                        <span>🔬 Science Expo 2026</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-pink-400 to-indigo-200 text-base sm:text-xl font-bold">— Dream • Discover • Create!</span>
+                    </h2>
+                    <p class="text-indigo-200/90 text-xs sm:text-sm mt-1.5 font-medium leading-relaxed">
+                        Organized by <strong class="text-white">S.K Robotics, Udumalpet</strong> &bull; In Association with <strong class="text-white">JSR Educational Institutions</strong>, <strong class="text-white">Galileo Science Club</strong> &amp; <strong class="text-white">Sri Aandal Educational Trust</strong>
+                    </p>
                 </div>
-                <div
-                    class="modal-body p-6 md:p-8 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-8">
-                    <!-- Poster Container: Left on Desktop, Top on Mobile -->
-                    <div class="w-full md:w-1/2 flex items-center justify-center bg-gray-50/80 rounded-2xl p-2 border border-gray-100"
-                        id="modal-poster-container">
-                        <img id="modal-poster-img"
-                            src="https://res.cloudinary.com/dujxs5154/image/upload/v1791304740/Expo_pbbxix.jpg"
-                            alt="Science Expo 2026 - Sri Varshini TVS and S.K Robotics" loading="lazy"
-                            class="rounded-xl shadow-lg w-full max-h-[500px] object-contain border border-gray-100 transform hover:scale-[1.02] transition-transform duration-300"
-                            style="object-fit: contain;">
-                    </div>
 
-                    <!-- Event Information & Description: Below on Mobile, Right on Desktop -->
-                    <div class="w-full md:w-1/2 flex flex-col justify-between text-left">
-                        <div>
-                            <span
-                                class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3">SCIENCE
-                                EXPO 2026</span>
-                            <h4 class="text-2xl font-black text-gray-900 leading-tight mb-2">Sri Varshini TVS &amp; S.K
-                                Robotics</h4>
-                            <p class="text-purple-600 font-bold text-sm uppercase tracking-wider mb-4">Innovation &amp;
-                                Technology Exhibition</p>
+                <!-- Header Close Button -->
+                <button type="button"
+                    class="expo-modal-close-trigger relative z-10 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 flex items-center justify-center flex-shrink-0"
+                    aria-label="Close Science Expo 2026 Modal">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
 
-                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                                Join us for an inspiring Science Expo 2026 featuring innovative student robotics
-                                projects, automated systems, and science models presented jointly by Sri Varshini TVS
-                                and S.K Robotics.<br><br>
-                                <strong>Explore the future of robotics and technology crafted by young
-                                    innovators!</strong>
-                            </p>
+            <!-- Modal Scrollable Body -->
+            <div class="overflow-y-auto p-4 sm:p-6 md:p-8 flex-1 sci-expo-custom-scroll bg-gradient-to-b from-white to-slate-50/50">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                    
+                    <!-- Left Column: Poster Display & QR Scan Hint -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="w-full bg-slate-900/5 rounded-2xl p-2.5 sm:p-3 border border-indigo-100 shadow-sm relative group" id="expo-poster-container">
+                            <img id="expo-poster-img"
+                                src="https://res.cloudinary.com/dujxs5154/image/upload/v1793118321/Image-27Oct26_kxix98.jpg"
+                                alt="Science Expo 2026 Poster – Dream, Discover &amp; Create – S.K Robotics &amp; JSR Educational Institutions"
+                                loading="lazy"
+                                class="w-full h-auto max-h-[380px] lg:max-h-[460px] object-contain rounded-xl shadow-md border border-gray-100 transition-transform duration-300 group-hover:scale-[1.01] cursor-pointer"
+                                onclick="openPosterLightbox()"
+                                title="Click to view full high-res poster and QR code">
+                            
+                            <!-- Click to Zoom Badge Overlay -->
+                            <button type="button"
+                                onclick="openPosterLightbox()"
+                                class="absolute bottom-5 right-5 bg-slate-900/85 hover:bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 flex items-center gap-1.5 transform hover:scale-105">
+                                <i class="fas fa-search-plus text-indigo-400"></i>
+                                <span>Zoom / Scan QR</span>
+                            </button>
+                        </div>
 
-                            <!-- Highlights Section -->
-                            <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100 mb-6">
-                                <h5
-                                    class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center">
-                                    <i class="fas fa-microchip text-indigo-500 mr-2"></i>Event Highlights
-                                </h5>
-                                <ul class="space-y-3 text-sm text-gray-700">
-                                    <li class="flex items-start gap-2 border-b border-gray-100 pb-2">
-                                        <i class="fas fa-robot text-indigo-600 mt-1"></i>
-                                        <div>
-                                            <span class="font-bold text-gray-900 block">Robotics &amp; AI Project
-                                                Demos</span>
-                                            <span class="text-xs text-gray-500">Live working prototypes and
-                                                automation</span>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start gap-2 border-b border-gray-100 pb-2">
-                                        <i class="fas fa-atom text-purple-600 mt-1"></i>
-                                        <div>
-                                            <span class="font-bold text-gray-900 block">Science &amp; STEM
-                                                Innovations</span>
-                                            <span class="text-xs text-gray-500">Interactive student project
-                                                displays</span>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-handshake text-pink-600 mt-1"></i>
-                                        <div>
-                                            <span class="font-bold text-gray-900 block">Joint Innovation Showcase</span>
-                                            <span class="text-xs text-gray-500">Sri Varshini TVS and S.K Robotics
-                                                collaboration</span>
-                                        </div>
-                                    </li>
-                                </ul>
+                        <!-- QR Code / Registration Scan Card -->
+                        <div class="w-full mt-3 bg-amber-50/80 border border-amber-200/80 rounded-xl p-3 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <div class="text-xs text-amber-900 leading-tight">
+                                <span class="font-bold block text-amber-950">Scan QR to Register</span>
+                                Click the poster to zoom into the QR code, or use the <strong>Register Now</strong> button below!
                             </div>
                         </div>
 
-                        <!-- Address and contact info -->
-                        <div class="text-xs text-gray-500 border-t border-gray-100 pt-4 mt-auto">
-                            <p class="mb-1"><i class="fas fa-map-marker-alt text-pink-500 mr-1.5"></i>UKPM Square, Near
-                                Sun Hotel, Palani Road, Udumalpet</p>
-                            <p><i class="fas fa-phone-alt text-green-500 mr-1.5"></i>8883335701, 9688987156</p>
+                        <!-- Quick Contact Bar under Poster on Mobile / Desktop -->
+                        <div class="w-full mt-3 grid grid-cols-2 gap-2 text-xs">
+                            <a href="tel:+918883335701" class="flex items-center justify-center gap-1.5 py-2 px-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold rounded-xl border border-indigo-100 transition-colors">
+                                <i class="fas fa-phone-alt text-indigo-600"></i>
+                                <span>8883335701</span>
+                            </a>
+                            <a href="tel:+918531914920" class="flex items-center justify-center gap-1.5 py-2 px-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold rounded-xl border border-indigo-100 transition-colors">
+                                <i class="fas fa-phone-alt text-indigo-600"></i>
+                                <span>8531914920</span>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Right Column: Event Information, Categories, Highlights -->
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-5">
+                        
+                        <!-- Event Description -->
+                        <div>
+                            <p id="expo-modal-desc" class="text-gray-700 text-sm sm:text-base leading-relaxed bg-indigo-50/70 p-4 rounded-2xl border border-indigo-100/80">
+                                ✨ Explore the exciting world of <strong class="text-indigo-950">Science, Robotics, Innovation, and Technology</strong> at <strong>Science Expo 2026</strong>. Showcase creative ideas, discover new possibilities, and inspire the next generation of innovators!
+                            </p>
+                        </div>
+
+                        <!-- 4 Key Metric Cards (Date, Venue, Fee, Awards) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-3 hover:border-indigo-200 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="far fa-calendar-alt"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Event Date</span>
+                                    <span class="text-sm font-extrabold text-gray-900 block">21 November 2026</span>
+                                    <span class="text-xs text-indigo-600 font-semibold">Saturday</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-3 hover:border-indigo-200 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Event Venue</span>
+                                    <span class="text-sm font-extrabold text-gray-900 block leading-tight">JSR Educational Institutions</span>
+                                    <span class="text-xs text-gray-500">Madathukulam, TN</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-3 hover:border-indigo-200 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fas fa-ticket-alt"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Registration Fee</span>
+                                    <span class="text-sm font-extrabold text-gray-900 block">₹100 <span class="text-xs font-normal text-gray-500">per batch</span></span>
+                                    <span class="text-xs text-amber-700 font-semibold">Affordable entry</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-3 hover:border-indigo-200 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Rewards &amp; Prizes</span>
+                                    <span class="text-sm font-extrabold text-gray-900 block leading-tight">Certificates &amp; Medals</span>
+                                    <span class="text-xs text-purple-700 font-semibold">Special 5 Prizes / Category</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Competition Categories -->
+                        <div class="bg-gradient-to-r from-slate-50 to-indigo-50/40 p-4 rounded-2xl border border-slate-200/70">
+                            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                                <i class="fas fa-graduation-cap text-indigo-500"></i> Eligible Student Categories
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                                <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 flex-shrink-0"></span>
+                                    <div>
+                                        <strong class="block text-gray-900 font-bold">Upper Primary</strong>
+                                        <span class="text-gray-500 text-[11px]">Classes V – VIII</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                                    <div>
+                                        <strong class="block text-gray-900 font-bold">Secondary</strong>
+                                        <span class="text-gray-500 text-[11px]">Classes IX – X</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-purple-500 flex-shrink-0"></span>
+                                    <div>
+                                        <strong class="block text-gray-900 font-bold">Sr. Secondary</strong>
+                                        <span class="text-gray-500 text-[11px]">Classes XI – XII</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Highlights -->
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-2xs">
+                            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                                <i class="fas fa-star text-amber-500"></i> Event Highlights
+                            </h4>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-robot text-indigo-500 text-sm"></i>
+                                    <span>Working model exhibitions</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-lightbulb text-amber-500 text-sm"></i>
+                                    <span>Innovative ideas &amp; discoveries</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-flask text-teal-500 text-sm"></i>
+                                    <span>Hands-on learning &amp; demos</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-trophy text-yellow-500 text-sm"></i>
+                                    <span>Exciting prizes across categories</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-medal text-purple-500 text-sm"></i>
+                                    <span>Certificates &amp; medals for all</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-user-astronaut text-blue-500 text-sm"></i>
+                                    <span>Meet experts &amp; build future skills</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Inspiring Tagline -->
+                        <div class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white p-3 rounded-xl text-center text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
+                            🚀 <em>Let young minds turn their imagination into innovation! Dream Big. Discover More. Create the Future!</em>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="modal-footer justify-center bg-gray-50 border-t-0 p-6">
-                    <a href="registration.html"
-                        class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 transform hover:scale-105 mr-3">
-                        Register / Join Us
+            </div>
+
+            <!-- Modal Footer (Action Buttons) -->
+            <div class="bg-slate-50 border-t border-slate-200/80 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
+                <!-- Contact Assistance -->
+                <div class="text-xs text-gray-500 flex items-center gap-2">
+                    <i class="fas fa-headset text-indigo-500"></i>
+                    <span>Questions? Call:</span>
+                    <a href="tel:+918883335701" class="font-bold text-gray-800 hover:text-indigo-600 transition-colors">8883335701</a>
+                    <span>/</span>
+                    <a href="tel:+918531914920" class="font-bold text-gray-800 hover:text-indigo-600 transition-colors">8531914920</a>
+                </div>
+
+                <!-- Action Button Group -->
+                <div class="flex flex-wrap items-center gap-2.5 ml-auto">
+                    <!-- WhatsApp Enquiry CTA -->
+                    <a href="https://wa.me/918883335701?text=Hi%2C%20I%20want%20to%20register%20for%20Science%20Expo%202026%20at%20JSR%20Institutions."
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-emerald-500/20 transition-all duration-200">
+                        <i class="fab fa-whatsapp text-base"></i>
+                        <span>WhatsApp</span>
                     </a>
+
+                    <!-- Primary Register CTA -->
+                    <a href="registration.html?event=science-expo-2026"
+                        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white text-xs sm:text-sm font-extrabold shadow-lg hover:shadow-indigo-500/25 transition-all duration-200 transform hover:scale-105">
+                        <span>Register Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <!-- Close Button -->
                     <button type="button"
-                        class="bg-gray-200 text-gray-700 hover:bg-gray-300 font-semibold py-3 px-8 rounded-full transition duration-300"
-                        data-bs-dismiss="modal">Close</button>
+                        class="expo-modal-close-trigger px-4 py-2.5 rounded-full bg-slate-200 hover:bg-slate-300 text-gray-700 text-xs sm:text-sm font-semibold transition-colors duration-200">
+                        Close
+                    </button>
                 </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Floating Reopen Promo Badge (Bottom-Left) -->
+    <button id="expo-reopen-pill"
+        type="button"
+        class="expo-modal-open-trigger fixed bottom-6 left-6 z-40 bg-gradient-to-r from-indigo-900 to-purple-900 text-white px-4 py-3 rounded-full shadow-2xl border border-indigo-400/30 flex items-center gap-2.5 sci-expo-reopen-btn group"
+        aria-label="Reopen Science Expo 2026 Details">
+        <span class="w-8 h-8 rounded-full bg-indigo-500/30 flex items-center justify-center text-cyan-300 group-hover:scale-110 transition-transform">
+            <i class="fas fa-atom text-base"></i>
+        </span>
+        <div class="text-left">
+            <span class="block text-[10px] uppercase font-bold text-indigo-300 tracking-wider leading-none">Event Announcement</span>
+            <span class="block text-xs sm:text-sm font-extrabold text-white leading-tight">Science Expo 2026</span>
+        </div>
+        <span class="ml-1 bg-pink-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm animate-pulse">
+            Join
+        </span>
+    </button>
+
+    <!-- Fullscreen Poster & QR Code Lightbox Modal -->
+    <div id="expoPosterLightbox"
+        class="fixed inset-0 z-[130] flex items-center justify-center p-3 sm:p-6 bg-slate-950/90 backdrop-blur-md transition-all duration-300 hidden"
+        role="dialog" aria-modal="true" aria-label="Science Expo 2026 Full Poster and QR Code Lightbox">
+        
+        <div class="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center">
+            <!-- Lightbox Close Button -->
+            <button type="button"
+                class="expo-lightbox-close-trigger absolute -top-12 right-0 sm:right-2 text-white hover:text-pink-400 bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition duration-200 focus:outline-none flex items-center justify-center"
+                aria-label="Close Poster Lightbox">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+
+            <!-- Lightbox Image -->
+            <img src="https://res.cloudinary.com/dujxs5154/image/upload/v1793118321/Image-27Oct26_kxix98.jpg"
+                alt="Science Expo 2026 Full Poster and Registration QR Code"
+                class="sci-expo-lightbox-img max-w-full max-h-[82vh] object-contain rounded-2xl shadow-2xl border border-white/10">
+
+            <div class="mt-3 text-center text-white text-xs sm:text-sm font-medium bg-black/60 px-4 py-1.5 rounded-full backdrop-blur-md">
+                📱 Scan QR code directly on screen, or click outside / Esc to close
             </div>
         </div>
     </div>
@@ -1002,10 +1188,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS for Modal -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <!-- Custom JavaScript -->
     <script src="./js/script.js"></script>
 </body>
